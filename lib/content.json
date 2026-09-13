@@ -1,0 +1,451 @@
+{
+  "images": {
+    "roomDark":      { "id": "photo-1589190141825-2862c12ad2c9", "alt": "Armchair beside a tall window in low evening light" },
+    "roomWide":      { "id": "photo-1724582586529-62622e50c0b3", "alt": "Modern living room with a large floor-to-ceiling window" },
+    "roomMinimal":   { "id": "photo-1687075197066-eb8bb5e91b16", "alt": "Minimal living room with a low sofa and stone table" },
+    "roomWarm":      { "id": "photo-1631048501831-46856f9eaaf2", "alt": "Warm neutral living room set beside a wide window" },
+    "roomFireplace": { "id": "photo-1762544968153-b9b47435fefd", "alt": "Modern living room with tan leather chairs and a fireplace" },
+    "roomDrapery":   { "id": "photo-1754611362309-71297e9f42fd", "alt": "Neutral living room with floor-length drapery filtering afternoon light" },
+    "roomTwoWindows":{ "id": "photo-1721932423849-e9033192b190", "alt": "Living room with two tall windows and layered light" },
+    "roomSofa":      { "id": "photo-1552242718-c5360894aecd", "alt": "Dark sofa and coffee table in a bright, high-ceilinged room" },
+    "roomFamily":    { "id": "photo-1628745750110-c8ddcdad2c15", "alt": "Grey sofa in a soft-lit family room" },
+    "roomChairs":    { "id": "photo-1628745750116-d4e990e4481a", "alt": "Leather chairs beside a tall shaded window" },
+    "dining":        { "id": "photo-1751290986063-879458195ad4", "alt": "Bright modern dining room with a run of large windows" },
+    "media":         { "id": "photo-1597406462637-eb560874d1f8", "alt": "Living room with wall-mounted television and a shaded window" },
+    "curtainBacklit":{ "id": "photo-1583878588952-172d1c9952b0", "alt": "Curtain lit from behind by a low sun" },
+    "curtainSheer":  { "id": "photo-1598414381594-18d86505f5d5", "alt": "Sheer white curtain moving in morning sunlight" },
+    "shadowWall":    { "id": "photo-1654179280639-3de6d9d7f996", "alt": "Plant shadow cast across a pale interior wall" },
+    "blindWhite":    { "id": "photo-1593027795006-ba68f4a374ad", "alt": "White window blinds filtering flat daylight" },
+    "curtainClose":  { "id": "photo-1725897113604-828c301b7bd3", "alt": "Close view of a curtain falling beside a window frame" },
+    "floorLight":    { "id": "photo-1725897112323-71a510c00f33", "alt": "Sunlight falling across a wooden floor beside a window" },
+    "curtainPattern":{ "id": "photo-1588001895517-cb4c7fe6b392", "alt": "Patterned curtain at a sunlit window" },
+    "windowLight":   { "id": "photo-1725897112699-d60146c122de", "alt": "Daylight pouring through a bare window opening" },
+    "study":         { "id": "photo-1640076666480-d4ac7a396b96", "alt": "Quiet study with a chair, desk and shaded window" },
+    "sheerLeaves":   { "id": "photo-1773774235180-de511ea41bbe", "alt": "Leaf shadows falling on a sheer curtain" },
+    "curtainFull":   { "id": "photo-1769446413147-a197533756c4", "alt": "Sunlight pushing through floor-length curtains" },
+    "hallWindows":   { "id": "photo-1678043006450-05c2697ce6bd", "alt": "Large room with a long run of tall windows and seating" },
+    "bedroom":       { "id": "photo-1613685703237-6628de38ddb7", "alt": "Made bed beside a window dressed in white blinds" },
+    "deskRoom":      { "id": "photo-1784886330082-a628b99fae8a", "alt": "Bright room with a desk, chair and window blinds" },
+    "boardroom":     { "id": "photo-1693625700727-b548ca8f5679", "alt": "Meeting room with a long table and wide glazing" },
+    "officeBlinds":  { "id": "photo-1603673319826-2f109cbf42aa", "alt": "Office window dressed in horizontal blinds" },
+    "officeCorner":  { "id": "photo-1562825606-7e7187e44a83", "alt": "Corner of an office beside a shaded window" },
+    "entrance":      { "id": "photo-1759390304765-f0f00d433a8a", "alt": "Modern entrance framed by full-height drapery" },
+    "blindsDaylight":{ "id": "photo-1603454478474-dc35f5138334", "alt": "White blinds diffusing midday daylight" },
+    "fabricBench":   { "id": "photo-1624516268152-1e48624026ed", "alt": "Fabric samples laid out across a workbench" },
+    "fabricStack":   { "id": "photo-1628565487762-bf17ac622f06", "alt": "Textile swatches stacked on a work table" },
+    "colourCards":   { "id": "photo-1624022086093-5ca1868e3670", "alt": "Colour cards fanned out for selection" },
+    "sampleBook":    { "id": "photo-1659767151200-f2543af40c44", "alt": "Fabric sample book opened to a range of tones" },
+    "woodSlats":     { "id": "photo-1591001939596-4aa39d641830", "alt": "Close view of wooden blind slats" },
+    "woodSlatsLight":{ "id": "photo-1591001939488-39db02d7e4b8", "alt": "Wooden blind slats catching daylight" },
+    "woodWindow":    { "id": "photo-1591183813052-da73df0ea77f", "alt": "Wooden blinds fitted to a window" },
+    "woodShadow":    { "id": "photo-1786280696079-2c35a7efc309", "alt": "Wooden blinds casting linear shadows across a dark panelled wall" }
+  },
+
+  "products": [
+    {
+      "slug": "roller-shades",
+      "name": "Roller Shades",
+      "tagline": "Clean, minimal and versatile.",
+      "hero": "blindWhite",
+      "card": "blindsDaylight",
+      "collections": ["modern", "minimal", "custom"],
+      "intro": "A single panel of fabric on a concealed roller. Nothing else. Roller shades are the most direct answer to a window — they disappear into the reveal when raised and give you an uninterrupted plane of colour and texture when lowered.",
+      "body": "Because the whole shade is one piece of fabric, the fabric choice does all the work. The same mechanism can give you a near-transparent screen that keeps the view and cuts glare, a soft light-filtering weave, or a full blackout panel for a bedroom. We cut and assemble each one to your opening, so the fabric sits square in the frame with even light gaps.",
+      "features": [
+        "Slim concealed roller tube with an optional fabric-wrapped or metal cassette",
+        "Chain, spring-assist, wand or motorised operation",
+        "Inside-mount for a recessed, architectural look or outside-mount for maximum coverage",
+        "Cordless and child-safe options available",
+        "Coupled shades on a shared tube for very wide openings"
+      ],
+      "materials": ["Solar screen mesh", "Woven polyester", "Linen-look textured weave", "Blackout-backed vinyl", "Natural-fibre blends"],
+      "colours": ["Warm white", "Oyster", "Sand", "Greige", "Stone grey", "Charcoal", "Deep black"],
+      "opacity": ["Sheer / solar screen (1–14% openness)", "Light filtering", "Room darkening", "Full blackout"],
+      "privacy": "Solar screens preserve the view by day and reduce it at night; light-filtering fabrics obscure detail while keeping the room bright; blackout fabrics give full privacy day and night.",
+      "motorisation": "Available on request — battery, plug-in or hardwired motors, with remote and smart-home options where the system supports it.",
+      "sizing": "Every shade is made to the measurements our installer takes on site, so there are no gaps you have to live with and no filler strips.",
+      "installation": "Fitted by our own installation team. We handle brackets, levelling, cord-safety hardware and the tidy-up.",
+      "gallery": ["blindsDaylight", "roomMinimal", "deskRoom", "roomWide"],
+      "faqs": [
+        { "q": "Will a solar screen give me privacy at night?", "a": "No. Solar screens work by contrast — during the day you can see out and passers-by mostly cannot see in, but that reverses once your interior lights are on. For night privacy we usually pair a screen with a blackout shade or drapery." },
+        { "q": "Can one shade cover a very wide window?", "a": "Up to a point. Beyond a certain width the fabric and tube start to deflect, so we either split the opening into two shades on a shared headrail or move you to a panel track system. We'll tell you which applies to your window at the consultation." },
+        { "q": "How much light comes in around the edges?", "a": "An inside-mounted roller always leaves a small light gap at the sides. If you need true darkness — a nursery or a media room — we recommend an outside mount or side channels." }
+      ]
+    },
+    {
+      "slug": "zebra-shades",
+      "name": "Zebra Shades",
+      "tagline": "Modern light control with adjustable privacy.",
+      "hero": "roomWide",
+      "card": "roomTwoWindows",
+      "collections": ["modern", "smart", "custom"],
+      "intro": "Also called dual or banded shades. Two layers of alternating sheer and opaque bands slide over each other, so you move continuously between a clear view, a filtered glow and full closure — without ever raising the shade.",
+      "body": "Zebra shades are the easiest recommendation we make for people who cannot decide between a sheer and a blackout. You get both, on one roller, and you adjust between them the way you would tilt a blind. They suit contemporary rooms particularly well because the horizontal banding reads as a deliberate graphic element rather than a window covering.",
+      "features": [
+        "Continuous adjustment from open view to closed privacy",
+        "Alternating sheer and opaque bands in matched or contrasting tones",
+        "Optional fabric-wrapped cassette to conceal the roller",
+        "Cordless and motorised operation available",
+        "Works well on tall windows where a single sheer would be too exposed"
+      ],
+      "materials": ["Polyester banded weave", "Textured linen-look banding", "Blackout-band construction", "Fine-mesh sheer bands"],
+      "colours": ["White", "Ivory", "Sand", "Taupe", "Silver grey", "Graphite", "Black"],
+      "opacity": ["Sheer bands open — full view", "Half-shifted — filtered daylight", "Bands aligned — room darkening", "Blackout-band construction available"],
+      "privacy": "Fully adjustable. Aligned bands give strong daytime privacy; standard zebra fabrics are not fully opaque at night, so choose a blackout-band construction where night privacy matters.",
+      "motorisation": "Widely available and popular on this product — the banded adjustment is genuinely nicer with a remote.",
+      "sizing": "Custom cut to your opening. Band alignment is set at assembly so the pattern reads straight across the window.",
+      "installation": "Professionally installed and levelled — banded shades show any tilt in the headrail immediately, so this one really does want a proper fitting.",
+      "gallery": ["roomTwoWindows", "roomWide", "media", "roomFamily"],
+      "faqs": [
+        { "q": "How is this different from a roller shade?", "a": "A roller gives you one fabric and one level of light control. A zebra gives you a range — you shift the bands to land anywhere between open and closed without changing the height of the shade." },
+        { "q": "Do zebra shades block light completely?", "a": "Standard ones do not; even with the bands aligned, some light passes through the seams. If you need true darkness, ask us about blackout-band constructions or a separate blackout layer." },
+        { "q": "Are they good for a bedroom?", "a": "They are lovely for daytime living spaces. For bedrooms we usually pair them with drapery or specify a blackout construction." }
+      ]
+    },
+    {
+      "slug": "roman-shades",
+      "name": "Roman Shades",
+      "tagline": "Elegant and sophisticated.",
+      "hero": "roomDrapery",
+      "card": "curtainClose",
+      "collections": ["luxury", "classic", "custom"],
+      "intro": "A soft fabric shade that folds into horizontal pleats as it rises. Roman shades bring the warmth and drape of a curtain to a window that does not have room for one.",
+      "body": "This is the product people choose when a room needs softness. Flat romans give you crisp, tailored folds; hobbled romans hold a permanent cascade of loops even when fully lowered. Because the fabric is real drapery weight, the way it falls matters — which is why the interlining, the fold spacing and the return depth are all decisions we make with you rather than defaults.",
+      "features": [
+        "Flat, hobbled or relaxed fold styles",
+        "Optional blackout or dim-out lining",
+        "Interlining available for extra body and insulation",
+        "Cordless lift systems and motorisation available",
+        "Coordinating drapery in the same fabric for a layered treatment"
+      ],
+      "materials": ["Linen and linen blends", "Cotton canvas", "Textured jacquards", "Wool-look wovens", "Faux silk"],
+      "colours": ["Warm white", "Bone", "Flax", "Oatmeal", "Clay", "Slate", "Charcoal"],
+      "opacity": ["Unlined — light filtering", "Dim-out lined", "Blackout lined", "Interlined for maximum body and light block"],
+      "privacy": "Lined and interlined romans give full privacy when lowered. Unlined fabrics will show silhouettes at night.",
+      "motorisation": "Available. Motorised romans need slightly deeper mounting space for the lift mechanism — we check this on site.",
+      "sizing": "Fold count and fold depth are calculated from your finished height so the stack sits where you want it and the pleats are even top to bottom.",
+      "installation": "Mounted on a headboard or cassette and dressed on site — a roman shade is set into its folds by hand the first time.",
+      "gallery": ["roomDrapery", "curtainClose", "roomWarm", "study"],
+      "faqs": [
+        { "q": "How much of the window does the shade cover when it's up?", "a": "The folded stack sits at the top of the opening. Roughly, the taller the shade, the deeper the stack — we can mount above the frame so the stack clears the glass entirely." },
+        { "q": "Flat or hobbled?", "a": "Flat reads as more contemporary and tailored. Hobbled reads softer and more traditional, and it hides an uneven window better. We bring both to the consultation." },
+        { "q": "Can I get a roman shade in the same fabric as my drapery?", "a": "Yes — that's one of the main reasons to choose them. We can make both from the same bolt so the tones match exactly." }
+      ]
+    },
+    {
+      "slug": "cellular-shades",
+      "name": "Cellular Shades",
+      "tagline": "Designed for insulation and energy efficiency.",
+      "hero": "bedroom",
+      "card": "roomFamily",
+      "collections": ["modern", "minimal", "custom"],
+      "intro": "Also known as honeycomb shades. The fabric is folded into hollow cells that trap a layer of air against the glass — the same principle as double glazing, applied to a shade.",
+      "body": "Cellular shades earn their place on cold windows, hot south-facing rooms and anywhere you are fighting a draft. The trapped air slows heat moving in either direction, and the pleated fabric collapses to a very small stack, so they are also the least visually intrusive product we make. Top-down/bottom-up configurations let you drop the shade from the top for daylight while keeping the lower half closed for privacy.",
+      "features": [
+        "Single- and double-cell constructions",
+        "Top-down / bottom-up operation available",
+        "Very compact stack when raised",
+        "Cordless and motorised options",
+        "Side channels available for improved thermal and light sealing"
+      ],
+      "materials": ["Spunlace polyester", "Woven-look cellular fabric", "Blackout-lined cellular fabric", "Metallised-backed fabric for high solar loads"],
+      "colours": ["Snow", "Alabaster", "Sand", "Pebble", "Ash", "Graphite"],
+      "opacity": ["Sheer cellular", "Light filtering", "Room darkening", "Blackout"],
+      "privacy": "Light-filtering cells obscure detail; blackout cells with side channels give the strongest privacy and darkness we offer in a shade.",
+      "motorisation": "Available, including on top-down/bottom-up configurations.",
+      "sizing": "Custom sized so the cells sit flush in the reveal — the tighter the fit, the better the thermal performance.",
+      "installation": "Inside-mounted wherever the reveal allows, since a close fit is what makes the insulation work.",
+      "gallery": ["bedroom", "roomFamily", "deskRoom", "study"],
+      "faqs": [
+        { "q": "Do cellular shades actually save energy?", "a": "They measurably slow heat transfer at the window compared with an uncovered pane, and a double-cell blackout fabric in a tight reveal does more than a single-cell sheer. We won't quote you a percentage — the real number depends on your glazing, orientation and how you use the shade." },
+        { "q": "What is top-down/bottom-up?", "a": "The shade has two moving rails. You can lower the top rail to let daylight in over your head while the bottom stays closed at eye level. It's the best privacy-plus-daylight compromise we sell." },
+        { "q": "Are they good for a nursery?", "a": "Yes — a blackout cellular with side channels is one of the darkest options available, and cordless operation removes the cord hazard entirely." }
+      ]
+    },
+    {
+      "slug": "venetian-blinds",
+      "name": "Venetian Blinds",
+      "tagline": "Classic horizontal control with a modern finish.",
+      "hero": "officeBlinds",
+      "card": "woodShadow",
+      "collections": ["classic", "modern", "custom"],
+      "intro": "Horizontal slats on a ladder tape or cord that tilt to aim light where you want it and lift into a compact stack when you want the window back.",
+      "body": "The venetian is the original adjustable window covering, and it is still the most precise. Tilting the slats lets you keep a room bright while cutting direct sun and blocking sightlines from the street — something no single-layer shade can do. Modern aluminium slats in slimline widths give a crisp, architectural line; wider slats read warmer and more traditional.",
+      "features": [
+        "Slat widths from slimline to wide",
+        "Tilt-only, tilt-and-lift or motorised tilt",
+        "Colour-matched ladder tapes or decorative cloth tapes",
+        "Aluminium, wood and faux-wood slat options",
+        "Suitable for kitchens and bathrooms in aluminium or faux wood"
+      ],
+      "materials": ["Anodised aluminium", "Powder-coated aluminium", "Basswood", "Faux wood (PVC composite)"],
+      "colours": ["White", "Ivory", "Brushed silver", "Bronze", "Espresso", "Matte black"],
+      "opacity": ["Slats open — full daylight", "Slats angled — directional light", "Slats closed — room darkening", "Blackout is not achievable through slats"],
+      "privacy": "Closed slats give strong privacy. Because slats overlap rather than seal, a small amount of light and sightline remains at the edges.",
+      "motorisation": "Motorised tilt is available and is the single most useful upgrade on a hard-to-reach window.",
+      "sizing": "Cut to your opening, with ladder and lift cords positioned so the stack sits evenly.",
+      "installation": "Levelled and fitted by our team, with cord-safety hardware installed as standard where cords are used.",
+      "gallery": ["officeBlinds", "woodShadow", "officeCorner", "blindWhite"],
+      "faqs": [
+        { "q": "Aluminium or wood?", "a": "Aluminium for kitchens, bathrooms and anywhere with moisture or heat; wood or faux wood for living spaces where you want warmth. Faux wood handles humidity better than real wood." },
+        { "q": "Can venetians block all the light?", "a": "No. Even fully closed, light passes between the slats and around the routing holes. For a dark room, choose a blackout roller, cellular or lined roman instead." },
+        { "q": "Are they hard to clean?", "a": "They need dusting more often than a flat shade — that's the honest trade-off for the adjustability." }
+      ]
+    },
+    {
+      "slug": "vertical-blinds",
+      "name": "Vertical Blinds",
+      "tagline": "Ideal for large windows and patio doors.",
+      "hero": "hallWindows",
+      "card": "boardroom",
+      "collections": ["modern", "classic", "custom"],
+      "intro": "Vertical vanes hanging from a top track. They rotate to control light and draw fully to one side, which makes them the practical answer for anything wider than it is tall — patio doors, sliders, and long runs of glass.",
+      "body": "Verticals get unfairly dismissed as an office product, largely because of the flimsy PVC vanes most people have met. In fabric, in a proper weight, in a colour chosen for the room, they are a genuinely elegant solution to a hard problem: a very wide opening you still need to walk through. The vanes stack tightly at one end and leave the doorway clear.",
+      "features": [
+        "Vane rotation for directional light control",
+        "Full draw to left, right or split to both sides",
+        "Fabric, faux-wood and PVC vane options",
+        "Wand or cord control, or motorised track",
+        "Curved and angled tracks available for bay windows"
+      ],
+      "materials": ["Woven fabric vanes", "Textured polyester", "Faux-wood vanes", "PVC vanes"],
+      "colours": ["White", "Linen", "Sand", "Pewter", "Charcoal", "Walnut-look"],
+      "opacity": ["Sheer vanes", "Light filtering", "Room darkening", "Blackout vanes available"],
+      "privacy": "Closed vanes give good privacy across a wide opening. There is a small overlap gap between vanes.",
+      "motorisation": "Motorised traverse and rotation are available and are a real convenience on wide runs.",
+      "sizing": "Track cut to your opening, vane count and stack direction set so the stack clears the doorway.",
+      "installation": "Track fixed to header, ceiling or reveal depending on the opening — we assess this on site.",
+      "gallery": ["hallWindows", "boardroom", "entrance", "roomChairs"],
+      "faqs": [
+        { "q": "Won't they look like an office?", "a": "Only if you choose office vanes. In a heavier fabric and a warm colour, with the track concealed, they read very differently. We'll show you samples." },
+        { "q": "Which way should the vanes stack?", "a": "Away from the door handle, usually — so the walkway stays clear. We work that out with you on site." },
+        { "q": "Do they work on a bay window?", "a": "Yes, with a curved or angled track. Bays need careful measuring, which is part of why we measure everything ourselves." }
+      ]
+    },
+    {
+      "slug": "wood-faux-wood-blinds",
+      "name": "Wood & Faux Wood Blinds",
+      "tagline": "Warm, timeless and customizable.",
+      "hero": "woodWindow",
+      "card": "woodSlats",
+      "collections": ["classic", "luxury", "custom"],
+      "intro": "Horizontal blinds with real basswood or engineered faux-wood slats. The warmth of timber, with the precise light control of a venetian.",
+      "body": "Real wood is lighter, takes a stain beautifully and has grain you can see. Faux wood is heavier, cheaper, and does not warp when a bathroom steams up or a south-facing window bakes. Most homes end up with both — wood in the living room and bedrooms, faux wood in the kitchen and bathroom — and because we finish them to the same colour, the house still reads as one thing.",
+      "features": [
+        "Real basswood or moisture-resistant faux wood",
+        "Wide slat options for a more architectural line",
+        "Decorative cloth tapes to conceal routing holes",
+        "Matching valances and returns",
+        "Stains and paint finishes to coordinate with trim or cabinetry"
+      ],
+      "materials": ["Basswood", "Faux wood (PVC composite)", "Composite hybrid slats"],
+      "colours": ["Bright white", "Antique white", "Natural oak", "Honey", "Walnut", "Espresso", "Matte black"],
+      "opacity": ["Slats open — full daylight", "Slats angled — directional light", "Slats closed — room darkening"],
+      "privacy": "Closed slats give strong privacy. Routing holes let through pinpoints of light unless you specify cloth tapes.",
+      "motorisation": "Motorised tilt available; motorised lift on wood blinds is limited by weight on very large windows.",
+      "sizing": "Slat count, ladder position and valance return all sized to your opening.",
+      "installation": "Fitted, levelled and finished with a matching valance where you want the headrail concealed.",
+      "gallery": ["woodWindow", "woodSlats", "woodSlatsLight", "woodShadow"],
+      "faqs": [
+        { "q": "Wood or faux wood — which should I choose?", "a": "Wood if you want the lightest weight and the real grain. Faux wood if the window is in a kitchen, bathroom or laundry, or gets hard direct sun. We can colour-match across both so a mixed house still looks consistent." },
+        { "q": "What are cloth tapes for?", "a": "They cover the routing holes the lift cords pass through, which removes the row of light pinpoints you'd otherwise see when the slats are closed. They're also a nice decorative detail." },
+        { "q": "Will wood blinds warp?", "a": "Real wood can move in sustained heat or humidity. That's exactly the situation faux wood is for, and we'll say so if your window is one of those." }
+      ]
+    },
+    {
+      "slug": "panel-track-blinds",
+      "name": "Panel Track Blinds",
+      "tagline": "Perfect for wide windows and sliding doors.",
+      "hero": "entrance",
+      "card": "hallWindows",
+      "collections": ["modern", "minimal", "custom"],
+      "intro": "Wide flat fabric panels that glide on a multi-channel track and stack behind one another. The contemporary answer to a very wide opening — and a rather good room divider.",
+      "body": "Where a vertical blind breaks a wide window into many small vanes, a panel track keeps the fabric in a few large, calm planes. Drawn closed they read as a single fabric wall; drawn open they stack into a slim column at one end. They work beautifully on patio doors and on the long glazing runs common in newer condos, and they are one of the few window treatments that also make sense as a moving partition inside a room.",
+      "features": [
+        "Two-, three-, four- and five-channel tracks",
+        "Panel widths sized to the opening",
+        "Stack left, right or split",
+        "Wand or cord draw, or motorised track",
+        "Doubles as a room divider or closet screen"
+      ],
+      "materials": ["Solar screen mesh", "Woven polyester", "Linen-look textured fabric", "Blackout-backed fabric", "Natural-fibre panels"],
+      "colours": ["White", "Oyster", "Sand", "Greige", "Slate", "Charcoal"],
+      "opacity": ["Sheer / solar screen", "Light filtering", "Room darkening", "Blackout"],
+      "privacy": "Closed panels overlap slightly, so privacy is good; the light gaps sit at the panel joins rather than between many vanes.",
+      "motorisation": "Motorised tracks are available and are worth it on very wide or high runs.",
+      "sizing": "Panel count and width are calculated from the opening so the stack clears the door and the joins fall where they look intentional.",
+      "installation": "Ceiling- or wall-mounted track, levelled across the full run.",
+      "gallery": ["entrance", "hallWindows", "roomSofa", "dining"],
+      "faqs": [
+        { "q": "Panel track or vertical blind?", "a": "Panel track for a calmer, more modern look and fewer moving parts. Vertical if you want to rotate for directional light without opening the covering at all." },
+        { "q": "How much space does the stack take?", "a": "Roughly the width of one panel plus a little, at whichever end you stack. We size the panels so the stack clears your door opening." },
+        { "q": "Can I use them as a room divider?", "a": "Yes, and it's one of our favourite uses for them — a ceiling track with opaque panels makes a light, reversible partition." }
+      ]
+    },
+    {
+      "slug": "motorized-blinds",
+      "name": "Motorized Blinds",
+      "tagline": "Smart, effortless control at the touch of a button.",
+      "hero": "media",
+      "card": "roomWide",
+      "collections": ["smart", "modern", "custom"],
+      "intro": "Almost everything we make can be motorised. No cords, no reaching, and — where the system supports it — schedules that move your shades before you think to.",
+      "body": "Motorisation stops being a novelty the moment you have a window you cannot easily reach, a wall of glass you would otherwise adjust one shade at a time, or a room that overheats every afternoon at four. It is also the cleanest answer to cord safety in a home with children or pets. We specify the motor type to the product and the window: battery for a retrofit with no wiring, plug-in where an outlet is close, hardwired where the walls are open.",
+      "features": [
+        "Battery, plug-in and hardwired motor options",
+        "Handheld remote, wall switch and app control where supported",
+        "Group and scene control — move a whole room at once",
+        "Scheduling and sun-based automation where the system supports it",
+        "Cordless by definition — no accessible operating cords"
+      ],
+      "materials": ["Available across roller, zebra, roman, cellular, venetian, vertical, panel track and drapery"],
+      "colours": ["Every fabric and finish in our range"],
+      "opacity": ["Determined by the fabric you choose, not the motor"],
+      "privacy": "Same as the underlying product — motorisation changes how it moves, not what it blocks.",
+      "motorisation": "This is the product. We'll match the motor, power source and control method to your window and your home.",
+      "sizing": "Motor and tube sizing are calculated from the finished dimensions and fabric weight so the shade moves smoothly and quietly.",
+      "installation": "Installed, paired and tested by our team, with limits set and remotes or groups configured before we leave.",
+      "gallery": ["media", "roomWide", "roomSofa", "dining"],
+      "faqs": [
+        { "q": "Do I need to run wiring?", "a": "Not necessarily. Battery motors retrofit into an existing home with no electrical work. Hardwiring is cleaner if your walls are already open during a renovation." },
+        { "q": "Will it work with my smart home?", "a": "Where the motor system supports it, yes — integration depends on which motor family we specify and what hub you have. Tell us what you're running and we'll tell you honestly what will and won't connect." },
+        { "q": "How long do the batteries last?", "a": "It depends on the motor, the shade weight and how often it moves, so we won't invent a number. We'll give you the manufacturer's figure for the exact motor we specify." },
+        { "q": "Is it safe around children?", "a": "Motorised coverings have no accessible operating cords, which removes the main hazard. It's one of the reasons we recommend them for nurseries and playrooms." }
+      ]
+    },
+    {
+      "slug": "custom-curtains-drapery",
+      "name": "Custom Curtains & Drapery",
+      "tagline": "Soft, elegant and completely customized.",
+      "hero": "curtainFull",
+      "card": "curtainSheer",
+      "collections": ["luxury", "classic", "custom"],
+      "intro": "Fabric, header, fullness, lining, length, hardware — every one of them is a decision, and every one of them changes how the room feels. This is the most customisable thing we make.",
+      "body": "A curtain is the only window covering that reads as furniture. It softens hard architecture, absorbs sound, adds height when it is hung high, and gives a room a sense of weight that no shade can. We make ours to your measurements, in your fabric, with the header style and fullness ratio chosen for the look you're after — a pinch pleat for something tailored, a ripple fold for a clean modern wave, a rod pocket for something informal.",
+      "features": [
+        "Sheer, blackout, lined, interlined and layered constructions",
+        "Pinch pleat, ripple fold, grommet, tab top and rod pocket headers",
+        "Fullness ratios chosen for the look, not the price",
+        "Motorised tracks and hand-drawn poles",
+        "Coordinating roman shades in the same fabric"
+      ],
+      "materials": ["Linen and linen blends", "Cotton and cotton blends", "Velvet", "Faux silk", "Wool-look wovens", "Sheer voiles"],
+      "colours": ["Warm white", "Bone", "Flax", "Oatmeal", "Clay", "Olive", "Slate", "Charcoal", "Ink"],
+      "opacity": ["Sheer voile", "Unlined", "Dim-out lined", "Blackout lined", "Interlined"],
+      "privacy": "Lined and blackout drapery gives full privacy when drawn. Sheers filter the view by day and reveal silhouettes at night — which is why they are so often layered with a second panel.",
+      "motorisation": "Motorised drapery tracks are available for both single and layered treatments.",
+      "sizing": "Made to your measured drop and width, with the fullness ratio applied so the panels stack and hang the way they should.",
+      "installation": "Hardware fitted, panels hung, and the drape dressed and tied on site so the folds set correctly from day one.",
+      "gallery": ["curtainFull", "curtainSheer", "sheerLeaves", "roomDrapery", "curtainBacklit", "entrance"],
+      "faqs": [
+        { "q": "How high should curtains be hung?", "a": "Usually well above the window frame and close to the ceiling — it makes the window and the room read taller. We'll show you the difference on site." },
+        { "q": "What is fullness, and does it matter?", "a": "It's how much more fabric there is than the width it covers. More fullness means deeper, more even folds. It's the single biggest difference between drapery that looks custom and drapery that looks flat." },
+        { "q": "Can I layer sheers and blackout?", "a": "Yes — a sheer for daytime softness and a blackout behind or in front for night. It's the most flexible thing you can do at a window, and it's very common in bedrooms." },
+        { "q": "Should the curtains touch the floor?", "a": "That's a style choice: a slight break, a kiss to the floor, or a puddle. We'll talk through what suits the room and how you use it." }
+      ]
+    }
+  ],
+
+  "collections": [
+    { "slug": "modern",  "name": "MODERN",  "blurb": "Clean lines, neutral tones and minimalist designs.", "image": "roomWide",     "long": "Flat planes, concealed hardware, and a palette that steps back so the architecture can speak. Roller, zebra and panel track systems in warm neutrals." },
+    { "slug": "luxury",  "name": "LUXURY",  "blurb": "Premium fabrics, elegant textures and sophisticated finishes.", "image": "roomDrapery",  "long": "Heavier weights, interlined romans, full-fullness drapery and fabrics with real texture. The treatments that make a room feel finished." },
+    { "slug": "minimal", "name": "MINIMAL", "blurb": "Simple, subtle and functional.", "image": "roomMinimal",  "long": "As little window covering as the room can get away with. Compact stacks, recessed mounts, and a single fabric doing one job well." },
+    { "slug": "classic", "name": "CLASSIC", "blurb": "Timeless materials and traditional styling.", "image": "woodWindow",   "long": "Wood slats, cloth tapes, pinch-pleat headers and matched valances. Detail that has been quietly correct for a century." },
+    { "slug": "smart",   "name": "SMART",   "blurb": "Motorized and automated window coverings.", "image": "media",        "long": "Motorised across every product family, with remote, wall and app control where the system supports it, and scheduling where it makes sense." },
+    { "slug": "custom",  "name": "CUSTOM",  "blurb": "Made specifically for your space.", "image": "fabricBench",   "long": "The whole catalogue, really. Every product we make is cut to a window we have measured ourselves — this collection is for the openings that need something drawn from scratch." }
+  ],
+
+  "process": [
+    { "n": "01", "title": "CONSULTATION",     "text": "We listen to your needs, style and vision. In your home or on a video call, we look at the rooms, the light and how you actually use the space — then narrow a very large catalogue down to a short list worth considering." },
+    { "n": "02", "title": "MEASUREMENT",      "text": "Our team takes precise measurements of your windows. Every opening, every reveal depth, every out-of-square frame. This is the step that decides whether the finished product fits like it was made for the window — because it was." },
+    { "n": "03", "title": "DESIGN",           "text": "We help you select the perfect materials, colours, textures and functionality. Samples in your own light, against your own walls, at the time of day you use the room." },
+    { "n": "04", "title": "MANUFACTURING",    "text": "Your window coverings are custom manufactured to your specifications. Cut, assembled and finished to the measurements we took — not trimmed down from a stock size." },
+    { "n": "05", "title": "QUALITY CHECK",    "text": "Every order is carefully inspected before installation. Dimensions verified, operation tested, fabric checked for flaws, hardware confirmed complete." },
+    { "n": "06", "title": "INSTALLATION",     "text": "Our professional team installs everything with precision. Brackets set, coverings levelled, operation demonstrated, packaging taken away with us." },
+    { "n": "07", "title": "ENJOY YOUR SPACE", "text": "Your windows are transformed. And if something needs adjusting afterwards, you call the people who made it — not a call centre." }
+  ],
+
+  "manufacturing": [
+    { "n": "01", "title": "Fabric selection",  "text": "Your fabric is pulled from the roll and inspected for flaws, shade variation and direction before anything is cut.", "image": "fabricBench" },
+    { "n": "02", "title": "Cutting",           "text": "Cut to your finished dimensions, square to the weave, with allowances calculated for the specific construction.", "image": "fabricStack" },
+    { "n": "03", "title": "Assembly",          "text": "Tubes, rails, tracks, cords and mechanisms are matched to the size and weight of your covering and assembled by hand.", "image": "woodSlatsLight" },
+    { "n": "04", "title": "Custom sizing",     "text": "Slat counts, fold spacing, vane counts and panel widths are set from your measurements so the finished proportions look deliberate.", "image": "woodSlats" },
+    { "n": "05", "title": "Motorisation",      "text": "Where specified, the motor is fitted, powered, and its travel limits set and tested before the covering leaves the bench.", "image": "media" },
+    { "n": "06", "title": "Finishing",         "text": "Hems, edges, headers, valances and returns are finished to the standard we'd want in our own homes.", "image": "curtainClose" },
+    { "n": "07", "title": "Quality control",   "text": "Dimensions re-checked against the order, operation cycled, fabric inspected in raking light.", "image": "colourCards" },
+    { "n": "08", "title": "Packaging",         "text": "Wrapped and labelled by room and window so installation day is quick and nothing gets confused on site.", "image": "sampleBook" }
+  ],
+
+  "trust": [
+    { "title": "Custom Measurements",   "text": "We measure every window ourselves. No guesswork, no ordering from numbers you had to take yourself." },
+    { "title": "Custom Manufacturing",  "text": "We make what we sell. Your coverings are built to your specifications, not cut down from stock." },
+    { "title": "Professional Installation", "text": "Our own installation team fits everything and takes the packaging away." },
+    { "title": "Expert Guidance",       "text": "Straight advice about what suits your window, including when the cheaper option is the right one." },
+    { "title": "Wide Selection",        "text": "Ten product families, and fabrics from sheer solar screen through to interlined blackout." },
+    { "title": "Free Consultation",     "text": "In-home or virtual, with samples, at no cost and with no obligation to buy." }
+  ],
+
+  "why": [
+    { "title": "Custom Made",             "text": "Every covering is manufactured to the measurements we take at your window." },
+    { "title": "Expert Guidance",         "text": "We narrow an overwhelming catalogue down to the options that actually suit your room." },
+    { "title": "Quality Materials",       "text": "Fabrics, slats and hardware chosen to hold up to daily use — and inspected before assembly." },
+    { "title": "Professional Installation","text": "Fitted, levelled and demonstrated by the people who made it." },
+    { "title": "Free Consultation",       "text": "In-home or virtual, with no cost and no obligation." },
+    { "title": "Personalised Service",    "text": "You deal with the same people from the first visit to the last adjustment." }
+  ],
+
+  "galleryCategories": [
+    { "slug": "living-rooms",       "name": "Living Rooms",       "images": ["roomWide", "roomMinimal", "roomFireplace", "roomSofa", "roomFamily", "roomTwoWindows"] },
+    { "slug": "bedrooms",           "name": "Bedrooms",           "images": ["bedroom", "roomWarm", "curtainSheer"] },
+    { "slug": "kitchens",           "name": "Kitchens",           "images": ["dining", "blindWhite", "floorLight"] },
+    { "slug": "offices",            "name": "Offices",            "images": ["study", "deskRoom", "officeCorner"] },
+    { "slug": "large-windows",      "name": "Large Windows",      "images": ["hallWindows", "roomTwoWindows", "windowLight"] },
+    { "slug": "patio-doors",        "name": "Patio Doors",        "images": ["entrance", "curtainFull", "roomChairs"] },
+    { "slug": "curtains",           "name": "Curtains",           "images": ["curtainSheer", "curtainBacklit", "sheerLeaves", "curtainPattern", "curtainClose", "roomDrapery"] },
+    { "slug": "motorized",          "name": "Motorized",          "images": ["media", "roomWide", "roomSofa"] },
+    { "slug": "commercial-projects","name": "Commercial Projects","images": ["boardroom", "officeBlinds", "hallWindows", "entrance"] }
+  ],
+
+  "beforeAfter": [
+    { "title": "Living room, bare glass to layered light", "before": "windowLight", "after": "roomDrapery", "note": "Sheer drapery layered over a light-filtering roller — glare gone, view kept." },
+    { "title": "Bedroom, morning sun controlled",          "before": "floorLight", "after": "bedroom",     "note": "Blackout cellular in a tight reveal, with side channels for the edges." },
+    { "title": "Wide opening, softened",                   "before": "hallWindows","after": "entrance",    "note": "Panel track in a linen-look fabric across a full-height run." },
+    { "title": "Study, glare to working light",            "before": "windowLight","after": "study",       "note": "Solar screen roller cutting glare on the screen without darkening the desk." }
+  ],
+
+  "faqs": [
+    { "q": "Do you offer free consultations?",           "a": "Yes. In-home and virtual consultations are free and carry no obligation. We bring samples, look at your windows and light, and talk through what suits the space.", "tags": ["consultation", "free", "booking"] },
+    { "q": "Do you manufacture your own blinds?",        "a": "Yes. We design, manufacture, supply and install our window coverings. Your order is built to the measurements we take at your window rather than trimmed down from a stock size.", "tags": ["manufacturing", "custom"] },
+    { "q": "Do you provide installation?",               "a": "Yes. Our own installation team fits everything, levels it, demonstrates the operation and takes the packaging away.", "tags": ["installation"] },
+    { "q": "Can blinds be completely customized?",       "a": "Within each product family, yes — dimensions, fabric, colour, opacity, lining, header style, hardware finish, control type and mounting are all specified per window. Some combinations aren't possible on some products, and we'll tell you which when we're with you.", "tags": ["custom", "options"] },
+    { "q": "Do you offer motorized blinds?",             "a": "Yes, across essentially every product family, with battery, plug-in and hardwired motor options and remote, wall or app control where the system supports it.", "tags": ["motorized", "smart"] },
+    { "q": "Can I choose my own fabric and colour?",     "a": "Yes. We bring a range of samples to the consultation and leave them with you so you can see them in your own light before deciding.", "tags": ["fabric", "colour", "custom"] },
+    { "q": "Do you offer blackout options?",             "a": "Yes — blackout roller shades, blackout cellular shades, blackout-lined roman shades and blackout-lined or interlined drapery. Note that no product blocks light at the edges unless it's outside-mounted or fitted with side channels, and we'll explain that trade-off for your window.", "tags": ["blackout", "bedroom", "nursery"] },
+    { "q": "Do you work with large windows?",            "a": "Yes. Wide and tall openings are one of the main reasons to go custom. Depending on the span we'll recommend coupled shades on a shared headrail, a panel track system, vertical blinds, or a motorised solution.", "tags": ["large windows", "wide"] },
+    { "q": "Do you cover patio doors?",                  "a": "Yes. Panel track blinds, vertical blinds and drapery on a traverse track all work on sliding and patio doors — the main consideration is where the stack sits so the doorway stays clear.", "tags": ["patio", "sliding doors"] },
+    { "q": "How long does the process take?",            "a": "It depends on the product, the size of the order and current lead times from our suppliers, so we won't quote a number here. You'll get a specific timeline in writing with your quote, before you commit to anything.", "tags": ["timeline", "lead time"] },
+    { "q": "Do you offer commercial solutions?",         "a": "Yes. We work with offices, condos, restaurants, retail spaces, property managers, builders and contractors on commercial and contract projects.", "tags": ["commercial", "contract", "trade"] },
+    { "q": "What areas do you service?",                 "a": "Please contact us with your address and we'll confirm whether you're inside our service area. We'd rather tell you honestly up front than take a booking we can't fulfil.", "tags": ["service area", "location"] },
+    { "q": "How do I request a quote?",                  "a": "Use the quote form on this site, or call or email us. Tell us the number of windows, roughly what you're looking for, and any measurements or photos you already have — we'll come back to you with options.", "tags": ["quote", "pricing"] },
+    { "q": "Do you offer warranty and support?",         "a": "Warranty terms depend on the product and the component manufacturer, so we won't state a blanket period here. You'll receive the applicable warranty details in writing with your order, and if something needs adjusting afterwards you call us directly.", "tags": ["warranty", "support", "service"] },
+    { "q": "Are your blinds child- and pet-safe?",       "a": "Cordless and motorised operation removes accessible operating cords, which is the main hazard. Where a corded product is used, we install the cord-safety hardware that comes with it. If you have young children or pets, tell us at the consultation and we'll steer the specification accordingly.", "tags": ["safety", "children", "pets", "cordless"] },
+    { "q": "Can you match window coverings across a whole house?", "a": "Yes, and it's worth doing. We can colour-match across different product families so that, for example, faux wood in the bathroom and real wood in the living room read as the same finish from the street.", "tags": ["matching", "whole home"] }
+  ],
+
+  "commercialSectors": [
+    { "title": "Offices",            "text": "Glare control at desks and screens, and a consistent look across a whole floor plate." },
+    { "title": "Condos",             "text": "Building-compliant treatments for large glazing runs and balcony doors." },
+    { "title": "Restaurants",        "text": "Managing west-facing sun at dinner service without closing off the room." },
+    { "title": "Retail",             "text": "Protecting merchandise from UV while keeping the storefront open and inviting." },
+    { "title": "Property managers",  "text": "Repeatable specifications across multiple units, with one point of contact." },
+    { "title": "Builders",           "text": "Coordinated measurement and installation scheduling that fits your build sequence." }
+  ],
+
+  "tradePartners": [
+    { "title": "Interior designers", "text": "Specification support, samples for your client presentations, and a manufacturer who will make what you drew." },
+    { "title": "Contractors",        "text": "Measure and install scheduled around your trades, with a single point of contact." },
+    { "title": "Builders",           "text": "Repeatable specs across units and phases, quoted per plan." },
+    { "title": "Developers",         "text": "Volume specification for multi-unit projects, with consistent finishes throughout." },
+    { "title": "Property managers",  "text": "Standardised replacements and turnover packages across a portfolio." }
+  ]
+}

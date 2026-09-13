@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Typeface variables — see the note at the top of app/layout.tsx.
+       Delete these three lines if you switch to next/font/google, which
+       injects its own values for the same variable names. */
+    --font-display: 'Manrope';
+    --font-body: 'Inter';
+    --font-editorial: 'Instrument Serif';
+
+    --sz-warm-white: #faf8f5;
+    --sz-char-950: #0c0b0a;
+    --sz-brass: #b08d57;
+    --nav-h: 76px;
+  }
+
+  * {
+    @apply border-warm-100;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-warm-white text-char-900 font-sans antialiased;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'cv11' 1;
+    overflow-x: hidden;
+  }
+
+  /* Visible, high-contrast focus for keyboard users — never removed. */
+  :focus-visible {
+    outline: 2px solid var(--sz-brass);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: var(--sz-char-950);
+    color: var(--sz-warm-white);
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  .shell {
+    @apply mx-auto w-full max-w-shell px-gutter;
+  }
+
+  .eyebrow {
+    @apply text-eyebrow font-medium uppercase text-stone-500;
+  }
+
+  .rule {
+    @apply h-px w-full bg-warm-200;
+  }
+
+  /* ── Buttons ─────────────────────────────────────────────────────────── */
+  .btn {
+    @apply relative inline-flex min-h-[48px] cursor-pointer items-center justify-center gap-2
+           whitespace-nowrap px-7 py-3.5 text-[0.72rem] font-semibold uppercase tracking-[0.2em]
+           transition-all duration-300 ease-luxe;
+  }
+
+  .btn-solid {
+    @apply btn bg-char-950 text-warm-white hover:bg-char-700;
+  }
+
+  .btn-outline {
+    @apply btn border border-char-950/25 text-char-900 hover:border-char-950 hover:bg-char-950 hover:text-warm-white;
+  }
+
+  .btn-light {
+    @apply btn border border-warm-white/35 text-warm-white hover:border-warm-white hover:bg-warm-white hover:text-char-950;
+  }
+
+  .btn-brass {
+    @apply btn bg-brass text-white hover:bg-brass-dark;
+  }
+
+  /* ── Link underline that draws in on hover ───────────────────────────── */
+  .link-draw {
+    @apply relative inline-block;
+  }
+  .link-draw::after {
+    content: '';
+    @apply absolute -bottom-0.5 left-0 h-px w-full origin-right scale-x-0 bg-current transition-transform duration-500 ease-luxe;
+  }
+  .link-draw:hover::after,
+  .link-draw:focus-visible::after {
+    @apply origin-left scale-x-100;
+  }
+
+  /* ── Glassmorphism, used sparingly — nav bar and lightbox chrome only ── */
+  .glass {
+    background: rgba(250, 248, 245, 0.72);
+    backdrop-filter: saturate(180%) blur(18px);
+    -webkit-backdrop-filter: saturate(180%) blur(18px);
+  }
+  .glass-dark {
+    background: rgba(12, 11, 10, 0.6);
+    backdrop-filter: saturate(180%) blur(18px);
+    -webkit-backdrop-filter: saturate(180%) blur(18px);
+  }
+
+  /* ── Scroll reveal (progressive enhancement: visible by default) ─────── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .reveal.is-in {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ── 3D tilt card ────────────────────────────────────────────────────── */
+  .tilt {
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+  }
+
+  /* ── The CSS-only slatted blind used on product cards and CTA panels ─── */
+  .slats {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      rgba(12, 11, 10, 0.34) 0px,
+      rgba(12, 11, 10, 0.34) 5px,
+      rgba(12, 11, 10, 0) 5px,
+      rgba(12, 11, 10, 0) 13px
+    );
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .drag-x { -webkit-overflow-scrolling: touch; }
+}
+
+/* ── Reduced motion: strip every non-essential animation ────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
