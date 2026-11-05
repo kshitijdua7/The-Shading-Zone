@@ -1,7 +1,4 @@
 import type { Metadata, Viewport } from 'next';
-// Next.js handles this stylesheet import at build time; the declaration is
-// intentionally suppressed here because CSS has no TypeScript module shape.
-// @ts-expect-error CSS side-effect imports are supported by Next.js.
 import './globals.css';
 
 import Navbar from '@/components/Navbar';
