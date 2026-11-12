@@ -158,25 +158,5 @@ No obligation. No pressure. Just expert advice.
 
 ---
 
-## Accounts & admin dashboard
-
-The site has **Log in** / **Sign up** in the navigation. The owner gets a full admin dashboard at `/admin`, where they can edit or add anything on the site: business details, products, collections, FAQs, gallery, process steps and images. The dashboard also has a lead inbox for quote, consultation and contact forms, and user management. Changes go live as soon as you press **Save & publish**.
-
-**Who is the owner?** Set `ADMIN_EMAIL` and whoever signs up with that email becomes admin. If it is not set, the first account created becomes admin. Admins can promote other users from the dashboard.
-
-```bash
-# .env.local
-ADMIN_EMAIL=owner@yourdomain.com
-AUTH_SECRET=some-long-random-string   # optional; auto-generated in data/secret if omitted
-DATA_DIR=./data                        # optional; where edits, users and leads are stored
-```
-
-Run it as a Node server (it is no longer a static export):
-
-```bash
-npm install
-npm run build
-npm start
-```
 
 All edits, accounts and leads are stored as JSON in `data/` (git-ignored). Host somewhere with a persistent disk, such as a VPS, or Render/Railway with a volume, and back that folder up. Serverless hosts like Vercel or Netlify will not keep the changes.
