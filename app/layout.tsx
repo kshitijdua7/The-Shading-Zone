@@ -1,11 +1,11 @@
 import type { Metadata, Viewport } from 'next';
+import { site } from '@/lib/live';
 import './globals.css';
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import ScrollRevealProvider from '@/components/ScrollRevealProvider';
-import { site } from '@/lib/site';
 
 /* ────────────────────────────────────────────────────────────────────────────
    TYPEFACES
@@ -47,11 +47,14 @@ export const viewport: Viewport = {
   // Zoom is never disabled — pinch-to-zoom stays available.
 };
 
-export const metadata: Metadata = {
+// Content is edited live from the admin dashboard, so every page renders per request.
+export const dynamic = 'force-dynamic';
+
+export const generateMetadata = (): Metadata => ({
   metadataBase: new URL(site.url),
   title: {
-    default: 'The Shading Zone | Custom Blinds, Shades & Curtains',
-    template: '%s | The Shading Zone',
+    default: 'All Time Solutions | Custom Blinds, Shades & Curtains',
+    template: '%s | All Time Solutions',
   },
   description: site.description,
   applicationName: site.name,
@@ -69,19 +72,19 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: site.name,
-    title: 'The Shading Zone | Custom Blinds, Shades & Curtains',
+    title: 'All Time Solutions | Custom Blinds, Shades & Curtains',
     description: site.description,
     url: site.url,
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'The Shading Zone | Custom Blinds, Shades & Curtains',
+    title: 'All Time Solutions | Custom Blinds, Shades & Curtains',
     description: site.description,
   },
   robots: { index: true, follow: true },
-};
+});
 
-const organizationJsonLd = {
+const organizationJsonLd = () => ({
   '@context': 'https://schema.org',
   '@type': 'HomeAndConstructionBusiness',
   name: site.name,
@@ -97,7 +100,7 @@ const organizationJsonLd = {
     'Motorized window coverings',
     'Window covering measurement and installation',
   ].map((name) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name } })),
-};
+});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -116,7 +119,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
 
         <ScrollRevealProvider />
-        <Navbar />
+        <Navbar contact={{ phone: site.contact.phone, phoneHref: site.contact.phoneHref, email: site.contact.email, emailHref: site.contact.emailHref }} />
         <main id="main">{children}</main>
         <Footer />
         <FloatingCTA />
@@ -124,7 +127,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd()) }}
         />
       </body>
     </html>

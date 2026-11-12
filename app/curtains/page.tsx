@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
+import { productBySlug, image, imageUrl } from '@/lib/live';
 import Link from 'next/link';
 import { PageHero, Section, SectionHeading } from '@/components/Section';
 import CurtainReveal from '@/components/CurtainReveal';
 import FaqAccordion from '@/components/FaqAccordion';
 import { LiquidMetalButton } from '@/components/ui/liquid-metal-button';
-import { productBySlug, image, imageUrl } from '@/lib/content';
 
 export const metadata: Metadata = {
   title: 'Custom Curtains & Drapery',
   description:
-    'Sheer, blackout, lined and layered custom curtains. Pinch pleat, ripple fold, grommet and rod pocket headers, custom fabrics and motorized tracks from The Shading Zone.',
+    'Sheer, blackout, lined and layered custom curtains. Pinch pleat, ripple fold, grommet and rod pocket headers, custom fabrics and motorized tracks from All Time Solutions.',
   alternates: { canonical: '/curtains' },
 };
 

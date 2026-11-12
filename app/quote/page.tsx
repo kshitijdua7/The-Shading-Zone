@@ -1,14 +1,13 @@
 import type { Metadata } from 'next';
+import { imageUrl, site } from '@/lib/live';
 import Link from 'next/link';
 import { PageHero, Section } from '@/components/Section';
 import QuoteForm from '@/components/forms/QuoteForm';
-import { imageUrl } from '@/lib/content';
-import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Get a Free Quote',
   description:
-    'Request a free, no-obligation quote for custom blinds, shades or curtains from The Shading Zone. Three quick steps — tell us about your project, choose your coverings, and we come back with options.',
+    'Request a free, no-obligation quote for custom blinds, shades or curtains from All Time Solutions. Three quick steps — tell us about your project, choose your coverings, and we come back with options.',
   alternates: { canonical: '/quote' },
 };
 

@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
+import { whyCards, imageUrl, image } from '@/lib/live';
 import Link from 'next/link';
 import { PageHero, Section, SectionHeading } from '@/components/Section';
 import { TickCards } from '@/components/Cards';
-import { whyCards, imageUrl, image } from '@/lib/content';
+
 import { LiquidMetalButton } from '@/components/ui/liquid-metal-button';
 
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'The Shading Zone combines custom manufacturing, design, quality materials, professional installation and personalised service for window coverings.',
+    'All Time Solutions combines custom manufacturing, design, quality materials, professional installation and personalised service for window coverings.',
   alternates: { canonical: '/about' },
 };
 
@@ -21,7 +22,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About us"
         title="We believe every window deserves a better view."
-        lead="The Shading Zone designs, manufactures, supplies and installs custom window coverings. Five things that are usually five different companies — which is exactly why they so often go wrong."
+        lead="All Time Solutions designs, manufactures, supplies and installs custom window coverings. Five things that are usually five different companies — which is exactly why they so often go wrong."
         image={imageUrl('roomChairs', 2000)}
         alt="Leather chairs beside a tall shaded window"
       />
@@ -38,7 +39,7 @@ export default function AboutPage() {
                 beside.
               </p>
               <p>
-                The Shading Zone exists to remove those handoffs. We measure your windows ourselves. We
+                All Time Solutions exists to remove those handoffs. We measure your windows ourselves. We
                 manufacture to those measurements. We install what we made, and if something needs
                 adjusting a month later, you call the people who made it rather than a call centre with
                 no record of your order.
@@ -92,7 +93,7 @@ export default function AboutPage() {
 
       <Section>
         <div className="shell">
-          <SectionHeading eyebrow="Why The Shading Zone" title="Why The Shading Zone?" />
+          <SectionHeading eyebrow="Why All Time Solutions" title="Why All Time Solutions?" />
           <div className="mt-20">
             <TickCards items={whyCards} />
           </div>
@@ -111,7 +112,7 @@ export default function AboutPage() {
             <p className="reveal mt-7 max-w-prose text-base leading-[1.85] text-stone-600">
               No invented five-star reviews. No made-up statistics about how many windows we&rsquo;ve
               covered. No award badges we didn&rsquo;t win, and no certifications we don&rsquo;t hold.
-              Everything stated on this website is something The Shading Zone can actually stand behind —
+              Everything stated on this website is something All Time Solutions can actually stand behind —
               and where a real number, warranty period or service area belongs, we&rsquo;ve left space
               for it rather than filling it in.
             </p>

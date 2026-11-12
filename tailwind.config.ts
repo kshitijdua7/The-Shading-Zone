@@ -1,7 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 /**
- * The Shading Zone design tokens.
+ * All Time Solutions design tokens.
  * Palette: warm white → off-white → beige → soft grey → charcoal → deep black,
  * with a single muted brass accent. Nothing here is decorative for its own sake;
  * every token maps to something used on the site.

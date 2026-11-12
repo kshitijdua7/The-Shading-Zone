@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
+import { collections, imageUrl } from '@/lib/live';
 import Link from 'next/link';
 import { PageHero, Section, SectionHeading } from '@/components/Section';
 import HorizontalScroller from '@/components/HorizontalScroller';
-import { collections, imageUrl } from '@/lib/content';
 
 export const metadata: Metadata = {
   title: 'Our Collections',
   description:
-    'Modern, Luxury, Minimal, Classic, Smart and Custom — The Shading Zone window coverings organised by interior style.',
+    'Modern, Luxury, Minimal, Classic, Smart and Custom — All Time Solutions window coverings organised by interior style.',
   alternates: { canonical: '/collections' },
 };
 

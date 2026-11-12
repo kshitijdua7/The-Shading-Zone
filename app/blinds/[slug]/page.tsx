@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { products, productBySlug, image, imageUrl, site } from '@/lib/live';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Check } from 'lucide-react';
@@ -8,12 +9,9 @@ import FaqAccordion from '@/components/FaqAccordion';
 import SeeItInYourSpace from '@/components/SeeItInYourSpace';
 import ProductCard from '@/components/ProductCard';
 import { LiquidMetalButton } from '@/components/ui/liquid-metal-button';
-import { products, productBySlug, image, imageUrl } from '@/lib/content';
-import { site } from '@/lib/site';
 
-export function generateStaticParams() {
-  return products.map((p) => ({ slug: p.slug }));
-}
+// Rendered per request so products/collections added in the admin dashboard work immediately.
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({
   params,
@@ -29,7 +27,7 @@ export async function generateMetadata({
     description: `${product.tagline} ${product.intro.slice(0, 120)}…`.slice(0, 158),
     alternates: { canonical: `/blinds/${product.slug}` },
     openGraph: {
-      title: `${product.name} | The Shading Zone`,
+      title: `${product.name} | All Time Solutions`,
       description: product.tagline,
       images: [imageUrl(product.hero, 1200)],
     },

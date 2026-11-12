@@ -3,11 +3,16 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
-import { primaryNav, footerNav, site } from '@/lib/site';
+import { primaryNav, footerNav } from '@/lib/site';
 import { cn } from '@/lib/utils';
 import Wordmark from './Wordmark';
 
-export default function Navbar() {
+type Contact = { phone: string; phoneHref: string; email: string; emailHref: string };
+type Me = { name: string; role: 'admin' | 'user' } | null;
+
+export default function Navbar({ contact }: { contact: Contact }) {
+  const site = { contact };
+  const [me, setMe] = useState<Me | undefined>(undefined);
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [overHero, setOverHero] = useState(false);
@@ -28,6 +33,28 @@ export default function Navbar() {
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, [isHome]);
+
+  /* Who is signed in (drives the Login / Dashboard links). */
+  useEffect(() => {
+    fetch('/api/auth/me/', { cache: 'no-store' })
+      .then((r) => r.json())
+      .then((d) => setMe(d.user ?? null))
+      .catch(() => setMe(null));
+  }, [pathname]);
+
+  const authLinks =
+    me === undefined
+      ? []
+      : me
+        ? [
+            me.role === 'admin'
+              ? { label: 'Dashboard', href: '/admin' }
+              : { label: 'My account', href: '/account' },
+          ]
+        : [
+            { label: 'Log in', href: '/login' },
+            { label: 'Sign up', href: '/signup' },
+          ];
 
   /* Close on route change. */
   useEffect(() => setOpen(false), [pathname]);
@@ -83,7 +110,7 @@ export default function Navbar() {
         <div className="shell flex items-center justify-between gap-6">
           <Link
             href="/"
-            aria-label="The Shading Zone — home"
+            aria-label="All Time Solutions — home"
             className={cn(
               'shrink-0 transition-colors duration-500',
               light ? 'text-warm-white' : 'text-char-950'
@@ -119,6 +146,18 @@ export default function Navbar() {
           </nav>
 
           <div className="flex items-center gap-3">
+            {authLinks.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className={cn(
+                  'hidden lg:inline-flex link-draw whitespace-nowrap text-[0.64rem] font-semibold uppercase tracking-[0.12em] transition-colors 2xl:text-[0.68rem]',
+                  light ? 'text-warm-white/85 hover:text-warm-white' : 'text-char-800 hover:text-char-950'
+                )}
+              >
+                {l.label}
+              </Link>
+            ))}
             <Link
               href="/quote"
               className={cn(
@@ -220,6 +259,11 @@ export default function Navbar() {
           </ul>
 
           <div className="mt-10 flex flex-col gap-3">
+            {authLinks.map((l) => (
+              <Link key={l.href} href={l.href} className="btn-light">
+                {l.label}
+              </Link>
+            ))}
             <Link href="/quote" className="btn bg-warm-white text-char-950 hover:bg-brass hover:text-white">
               Get a free quote
             </Link>

@@ -3,7 +3,7 @@
 /* ────────────────────────────────────────────────────────────────────────────
    LIQUID METAL BUTTON
 
-   The brushed-metal shader button, integrated for The Shading Zone.
+   The brushed-metal shader button, integrated for All Time Solutions.
 
    Changes from the original snippet, and why:
    • The shader library is imported dynamically inside the effect rather than at

@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
+import { commercialSectors, imageUrl } from '@/lib/live';
 import Link from 'next/link';
 import { PageHero, Section, SectionHeading } from '@/components/Section';
 import { NumberCards } from '@/components/Cards';
-import { commercialSectors, imageUrl } from '@/lib/content';
 
 export const metadata: Metadata = {
   title: 'Commercial & Contract Projects',
   description:
-    'Window coverings for offices, condos, restaurants, retail, property managers, builders and contractors — custom manufactured and installed by The Shading Zone.',
+    'Window coverings for offices, condos, restaurants, retail, property managers, builders and contractors — custom manufactured and installed by All Time Solutions.',
   alternates: { canonical: '/commercial' },
 };
 

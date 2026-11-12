@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { site, footerNav } from '@/lib/site';
+import { site } from '@/lib/live';
+import { footerNav } from '@/lib/site';
 import Wordmark from './Wordmark';
 
 export default function Footer() {

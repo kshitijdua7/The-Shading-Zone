@@ -27,7 +27,7 @@
    USAGE
      <MetroHero
        videoSrc="/video/blinds-opening.mp4"
-       title="THE SHADING ZONE"
+       title="ALL TIME SOLUTIONS"
        tagline="Your view. Your light. Your style."
      />
 
@@ -60,7 +60,7 @@ function clamp(v: number, min: number, max: number) {
 
 export default function MetroHero({
   videoSrc,
-  title = 'THE SHADING ZONE',
+  title = 'ALL TIME SOLUTIONS',
   scrollHint = 'SCROLL TO REVEAL YOUR VIEW',
   tagline = 'Your view. Your light. Your style.',
   signature = false,

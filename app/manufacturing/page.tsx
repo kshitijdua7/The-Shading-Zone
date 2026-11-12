@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
+import { manufacturingSteps, image, imageUrl } from '@/lib/live';
 import Link from 'next/link';
 import { PageHero, Section, SectionHeading } from '@/components/Section';
-import { manufacturingSteps, image, imageUrl } from '@/lib/content';
+
 import { LiquidMetalButton } from '@/components/ui/liquid-metal-button';
 
 export const metadata: Metadata = {
   title: 'Manufacturing',
   description:
-    'The Shading Zone manufactures its own window coverings — fabric selection, cutting, assembly, custom sizing, motorization, finishing, quality control and packaging.',
+    'All Time Solutions manufactures its own window coverings — fabric selection, cutting, assembly, custom sizing, motorization, finishing, quality control and packaging.',
   alternates: { canonical: '/manufacturing' },
 };
 
@@ -74,7 +75,7 @@ export default function ManufacturingPage() {
           <p className="reveal mt-8 max-w-prose text-base leading-[1.8] text-warm-white/70">
             We describe what we do and nothing more. There are no origin claims, certifications or
             accreditations on this page, because none were provided to us — and a manufacturing claim
-            you can&rsquo;t evidence is worse than no claim at all. When The Shading Zone has those
+            you can&rsquo;t evidence is worse than no claim at all. When All Time Solutions has those
             credentials in writing, this is where they belong.
           </p>
           <div className="reveal mt-12 flex flex-col items-center gap-4 sm:flex-row">

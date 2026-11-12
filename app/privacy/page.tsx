@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
+import { site } from '@/lib/live';
 import { PageHero, Section } from '@/components/Section';
-import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
-  description: 'How The Shading Zone handles the information you send through this website.',
+  description: 'How All Time Solutions handles the information you send through this website.',
   alternates: { canonical: '/privacy' },
   robots: { index: false, follow: true },
 };

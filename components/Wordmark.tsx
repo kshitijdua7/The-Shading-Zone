@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils';
 
 /**
- * The Shading Zone mark: a window divided into slats that step from closed to
+ * All Time Solutions mark: a window divided into slats that step from closed to
  * open, set beside the wordmark. Pure SVG, `currentColor` throughout, so it
  * inverts cleanly on dark and light and scales to any size without an asset.
  */
@@ -14,9 +14,9 @@ export default function Wordmark({
 }) {
   return (
     <svg
-      viewBox="0 0 320 46"
+      viewBox="0 0 345 46"
       role="img"
-      aria-label="The Shading Zone"
+      aria-label="All Time Solutions"
       className={cn('h-auto', className)}
       fill="none"
     >
@@ -32,41 +32,28 @@ export default function Wordmark({
           <rect x="5" y="34.4" width="28" height="0.8" fill="currentColor" opacity="0.16" />
         </g>
       )}
-      {/* Subordinate article, set above the wordmark. */}
-      <text
-        x={showMark ? 53 : 1}
-        y="13.5"
-        fill="currentColor"
-        fontFamily="var(--font-display), Manrope, Helvetica Neue, Arial, sans-serif"
-        fontSize="10.5"
-        fontWeight="600"
-        letterSpacing="3.6"
-        opacity="0.6"
-      >
-        THE
-      </text>
-      <text
+            <text
         x={showMark ? 52 : 0}
-        y="33"
+        y="30"
         fill="currentColor"
         fontFamily="var(--font-display), Manrope, Helvetica Neue, Arial, sans-serif"
         fontSize="25"
         fontWeight="800"
         letterSpacing="1.1"
       >
-        SHADING
+        ALL TIME
       </text>
       <text
-        x={showMark ? 178 : 126}
-        y="33"
+        x={showMark ? 192 : 140}
+        y="30"
         fill="currentColor"
         fontFamily="var(--font-display), Manrope, Helvetica Neue, Arial, sans-serif"
         fontSize="25"
         fontWeight="300"
-        letterSpacing="4.2"
+        letterSpacing="1.4"
         opacity="0.78"
       >
-        ZONE
+        SOLUTIONS
       </text>
     </svg>
   );

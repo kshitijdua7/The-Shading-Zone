@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
+import { tradePartners, imageUrl } from '@/lib/live';
 import Link from 'next/link';
 import { PageHero, Section, SectionHeading } from '@/components/Section';
 import { NumberCards } from '@/components/Cards';
-import { tradePartners, imageUrl } from '@/lib/content';
 
 export const metadata: Metadata = {
   title: 'For Designers, Builders & Trade',
   description:
-    'Trade partnerships for interior designers, contractors, builders, developers and property managers — specification support, samples and coordinated installation from The Shading Zone.',
+    'Trade partnerships for interior designers, contractors, builders, developers and property managers — specification support, samples and coordinated installation from All Time Solutions.',
   alternates: { canonical: '/trade' },
 };
 

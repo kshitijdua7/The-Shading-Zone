@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
+import { site } from '@/lib/live';
 import { PageHero, Section } from '@/components/Section';
-import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Terms & Conditions',
-  description: 'Terms governing the use of The Shading Zone website.',
+  description: 'Terms governing the use of All Time Solutions website.',
   alternates: { canonical: '/terms' },
   robots: { index: false, follow: true },
 };

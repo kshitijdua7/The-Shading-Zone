@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
+import { faqs, imageUrl } from '@/lib/live';
 import Link from 'next/link';
 import { PageHero, Section } from '@/components/Section';
 import FaqAccordion from '@/components/FaqAccordion';
-import { faqs, imageUrl } from '@/lib/content';
 
 export const metadata: Metadata = {
   title: 'FAQ',

@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
+import { processSteps, imageUrl } from '@/lib/live';
 import Link from 'next/link';
 import { PageHero, Section, SectionHeading } from '@/components/Section';
 import ProcessTimeline from '@/components/ProcessTimeline';
-import { processSteps, imageUrl } from '@/lib/content';
 
 export const metadata: Metadata = {
   title: 'Our Process',
   description:
-    'Consultation, measurement, design, manufacturing, quality check, installation. The seven steps of a window covering from The Shading Zone, start to finish.',
+    'Consultation, measurement, design, manufacturing, quality check, installation. The seven steps of a window covering from All Time Solutions, start to finish.',
   alternates: { canonical: '/process' },
 };
 

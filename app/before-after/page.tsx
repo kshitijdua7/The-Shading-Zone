@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
+import { beforeAfterPairs, imageUrl } from '@/lib/live';
 import Link from 'next/link';
 import { PageHero, Section } from '@/components/Section';
 import BeforeAfter from '@/components/BeforeAfter';
-import { beforeAfterPairs, imageUrl } from '@/lib/content';
 
 export const metadata: Metadata = {
   title: 'Before & After',
@@ -34,7 +34,7 @@ export default function BeforeAfterPage() {
             <p className="max-w-prose text-sm leading-relaxed text-stone-500">
               These comparisons illustrate the difference a window covering makes to a room. They pair
               rooms of a similar type rather than showing one address before and after, and they will be
-              replaced with real project pairs as The Shading Zone photographs its own installations.
+              replaced with real project pairs as All Time Solutions photographs its own installations.
             </p>
             <Link href="/consultation" className="btn-solid">Book a free consultation</Link>
           </div>

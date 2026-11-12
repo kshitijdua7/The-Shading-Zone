@@ -1,13 +1,12 @@
 import type { Metadata } from 'next';
+import { collections, productsInCollection, imageUrl } from '@/lib/live';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { PageHero, Section, SectionHeading } from '@/components/Section';
 import ProductCard from '@/components/ProductCard';
-import { collections, productsInCollection, imageUrl } from '@/lib/content';
 
-export function generateStaticParams() {
-  return collections.map((c) => ({ slug: c.slug }));
-}
+// Rendered per request so products/collections added in the admin dashboard work immediately.
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({
   params,

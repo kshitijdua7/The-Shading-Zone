@@ -3,11 +3,22 @@
 import Link from 'next/link';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
-import { galleryCategories, image, imageUrl, type ImageKey } from '@/lib/content';
+import type { GalleryCategory } from '@/lib/content';
+
+type ImageKey = string;
+export type GalleryImageMap = Record<string, { thumb: string; full: string; alt: string }>;
 
 type Item = { key: ImageKey; category: string; categorySlug: string };
 
-export default function GalleryGrid() {
+export default function GalleryGrid({
+  categories: galleryCategories,
+  images,
+}: {
+  categories: GalleryCategory[];
+  images: GalleryImageMap;
+}) {
+  const image = (key: string, _w?: number) => ({ src: images[key]?.thumb ?? '', alt: images[key]?.alt ?? '' });
+  const imageUrl = (key: string, _w?: number) => images[key]?.full ?? '';
   const [filter, setFilter] = useState<string>('all');
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
@@ -25,7 +36,7 @@ export default function GalleryGrid() {
       }
     }
     return out;
-  }, []);
+  }, [galleryCategories]);
 
   const visible = useMemo(
     () => (filter === 'all' ? items : items.filter((i) => i.categorySlug === filter)),

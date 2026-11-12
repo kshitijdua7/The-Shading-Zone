@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────────────────────
-   THE SHADING ZONE — SITE CONFIGURATION
+   ALL TIME SOLUTIONS — SITE CONFIGURATION
 
    ⚠️  EVERY PLACEHOLDER IN THIS FILE IS MARKED `TODO`.
    Replace them once and the correct details appear everywhere on the site:
@@ -8,24 +8,24 @@
    Nothing on this site states a warranty period, a lead time, a service area,
    a certification, a review, a rating or a statistic — because none of those
    were supplied. Add them here (and to lib/content.json) only when they are
-   claims The Shading Zone can actually support.
+   claims All Time Solutions can actually support.
    ──────────────────────────────────────────────────────────────────────────── */
 
 export const site = {
-  name: 'The Shading Zone',
-  legalName: 'The Shading Zone', // TODO: registered business name, if different
+  name: 'All Time Solutions',
+  legalName: 'All Time Solutions', // TODO: registered business name, if different
   tagline: 'Custom blinds. Custom curtains. Custom spaces.',
   description:
-    'The Shading Zone designs, manufactures, supplies and installs custom blinds, shades, curtains and window coverings. Free in-home and virtual consultations.',
+    'All Time Solutions designs, manufactures, supplies and installs custom blinds, shades, curtains and window coverings. Free in-home and virtual consultations.',
 
   // TODO: replace with your live domain — used for canonical URLs, sitemap and OG tags.
-  url: 'https://www.shadingzone.com',
+  url: 'https://www.alltimesolutions.com',
 
   contact: {
-    phone: '(000) 000-0000',            // TODO
-    phoneHref: 'tel:+10000000000',      // TODO
-    email: 'hello@shadingzone.com',     // TODO
-    emailHref: 'mailto:hello@shadingzone.com', // TODO
+    phone: '(416) 317-5661',
+    phoneHref: 'tel:+14163175661',
+    email: 'alltimesolutions@gmail.com',
+    emailHref: 'mailto:alltimesolutions@gmail.com',
 
     // TODO: replace with your real hours, or set `hours: null` to hide the block.
     hours: [
@@ -51,12 +51,7 @@ export const site = {
     },
   },
 
-  social: [
-    // TODO: replace the `#` hrefs, or delete the entries you don't use.
-    { label: 'Instagram', href: '#' },
-    { label: 'Facebook', href: '#' },
-    { label: 'Pinterest', href: '#' },
-  ],
+  social: [] as { label: string; href: string }[],
 
   /**
    * Where the consultation / quote / contact forms POST.

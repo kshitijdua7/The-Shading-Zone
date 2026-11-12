@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
+import { products, whyCards, imageUrl } from '@/lib/live';
 import Link from 'next/link';
 import { PageHero, Section, SectionHeading } from '@/components/Section';
 import ProductCard from '@/components/ProductCard';
 import { TickCards } from '@/components/Cards';
-import { products, whyCards, imageUrl } from '@/lib/content';
 
 export const metadata: Metadata = {
   title: 'Blinds & Shades',
   description:
-    'Roller, zebra, roman, cellular, venetian, vertical, wood and panel track blinds — custom manufactured and professionally installed by The Shading Zone.',
+    'Roller, zebra, roman, cellular, venetian, vertical, wood and panel track blinds — custom manufactured and professionally installed by All Time Solutions.',
   alternates: { canonical: '/blinds' },
 };
 
@@ -83,7 +83,7 @@ export default function BlindsPage() {
 
       <Section>
         <div className="shell">
-          <SectionHeading eyebrow="Why The Shading Zone" title="What you get either way" />
+          <SectionHeading eyebrow="Why All Time Solutions" title="What you get either way" />
           <div className="mt-20">
             <TickCards items={whyCards} />
           </div>

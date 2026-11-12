@@ -1,15 +1,14 @@
 import type { Metadata } from 'next';
+import { imageUrl, site } from '@/lib/live';
 import Link from 'next/link';
 import { Phone, Mail, Clock, MapPin } from 'lucide-react';
 import { PageHero, Section } from '@/components/Section';
 import ContactForm from '@/components/forms/ContactForm';
-import { imageUrl } from '@/lib/content';
-import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Call, email or message The Shading Zone about custom blinds, shades and curtains — or book a free in-home or virtual consultation.',
+    'Call, email or message All Time Solutions about custom blinds, shades and curtains — or book a free in-home or virtual consultation.',
   alternates: { canonical: '/contact' },
 };
 

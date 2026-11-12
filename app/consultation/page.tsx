@@ -1,14 +1,13 @@
 import type { Metadata } from 'next';
+import { imageUrl, site } from '@/lib/live';
 import { Home, Video, Ruler, Palette } from 'lucide-react';
 import { PageHero, Section } from '@/components/Section';
 import ConsultationForm from '@/components/forms/ConsultationForm';
-import { imageUrl } from '@/lib/content';
-import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Book a Free Consultation',
   description:
-    'Book a free in-home or virtual window covering consultation with The Shading Zone. Samples, expert guidance and precise measurements — with no obligation.',
+    'Book a free in-home or virtual window covering consultation with All Time Solutions. Samples, expert guidance and precise measurements — with no obligation.',
   alternates: { canonical: '/consultation' },
 };
 

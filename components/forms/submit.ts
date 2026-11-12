@@ -1,3 +1,4 @@
+
 import { site } from '@/lib/site';
 
 export type SubmitState = 'idle' | 'submitting' | 'success' | 'error';
@@ -18,17 +19,21 @@ export async function submitLead(
   const data = new FormData(form);
   Object.entries(meta).forEach(([k, v]) => data.append(k, v));
 
-  if (!site.formEndpoint) {
+  // Default: store the lead in the admin dashboard's inbox (/api/lead).
+  // Set site.formEndpoint in lib/site.ts to send it to an outside service instead.
+  const endpoint = site.formEndpoint || '/api/lead/';
+
+  if (!endpoint) {
     // eslint-disable-next-line no-console
     console.warn(
-      '[The Shading Zone] site.formEndpoint is not set — this submission was NOT sent. ' +
+      '[All Time Solutions] site.formEndpoint is not set — this submission was NOT sent. ' +
         'Set it in lib/site.ts before going live.'
     );
     await new Promise((r) => setTimeout(r, 900));
     return;
   }
 
-  const res = await fetch(site.formEndpoint, {
+  const res = await fetch(endpoint, {
     method: 'POST',
     body: data,
     headers: { Accept: 'application/json' },

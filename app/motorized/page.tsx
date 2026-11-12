@@ -1,16 +1,16 @@
 import type { Metadata } from 'next';
+import { productBySlug, imageUrl } from '@/lib/live';
 import Link from 'next/link';
 import { Radio, Smartphone, CalendarClock, Hand, ShieldCheck, Home } from 'lucide-react';
 import { PageHero, Section, SectionHeading } from '@/components/Section';
 import MotorizedDemo from '@/components/MotorizedDemo';
 import FaqAccordion from '@/components/FaqAccordion';
 import { LiquidMetalButton } from '@/components/ui/liquid-metal-button';
-import { productBySlug, imageUrl } from '@/lib/content';
 
 export const metadata: Metadata = {
   title: 'Motorized & Smart Blinds',
   description:
-    'Motorized blinds, shades and curtains from The Shading Zone — remote, wall switch and app control, battery or hardwired motors, and cordless operation for child and pet safety.',
+    'Motorized blinds, shades and curtains from All Time Solutions — remote, wall switch and app control, battery or hardwired motors, and cordless operation for child and pet safety.',
   alternates: { canonical: '/motorized' },
 };
 

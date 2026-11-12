@@ -1,10 +1,10 @@
-About Shading Zone
+About All Time Solutions
 
-Shading Zone is a custom window covering company. We design, manufacture, supply and install blinds, shades, curtains and drapery for homes and commercial spaces.
+All Time Solutions is a custom window covering company. We design, manufacture, supply and install blinds, shades, curtains and drapery for homes and commercial spaces.
 
 Most window covering problems are not really about the blind. They are about a measurement somebody took in a hurry, a stock size trimmed down to nearly fit, or a fabric chosen from a photograph on a screen instead of held against the wall it has to live beside.
 
-Shading Zone exists to remove those handoffs. We measure your windows ourselves. We manufacture to those measurements. We install what we made — and if something needs adjusting a month later, you call the people who made it rather than a call centre with no record of your order.
+All Time Solutions exists to remove those handoffs. We measure your windows ourselves. We manufacture to those measurements. We install what we made — and if something needs adjusting a month later, you call the people who made it rather than a call centre with no record of your order.
 
 We believe window coverings should do more than control light. They should transform the way a space looks, feels and functions.
 
@@ -155,3 +155,28 @@ Choose your window coverings
 We'll contact you with your options
 
 No obligation. No pressure. Just expert advice.
+
+---
+
+## Accounts & admin dashboard
+
+The site has **Log in** / **Sign up** in the navigation. The owner gets a full admin dashboard at `/admin`, where they can edit or add anything on the site: business details, products, collections, FAQs, gallery, process steps and images. The dashboard also has a lead inbox for quote, consultation and contact forms, and user management. Changes go live as soon as you press **Save & publish**.
+
+**Who is the owner?** Set `ADMIN_EMAIL` and whoever signs up with that email becomes admin. If it is not set, the first account created becomes admin. Admins can promote other users from the dashboard.
+
+```bash
+# .env.local
+ADMIN_EMAIL=owner@yourdomain.com
+AUTH_SECRET=some-long-random-string   # optional; auto-generated in data/secret if omitted
+DATA_DIR=./data                        # optional; where edits, users and leads are stored
+```
+
+Run it as a Node server (it is no longer a static export):
+
+```bash
+npm install
+npm run build
+npm start
+```
+
+All edits, accounts and leads are stored as JSON in `data/` (git-ignored). Host somewhere with a persistent disk, such as a VPS, or Render/Railway with a volume, and back that folder up. Serverless hosts like Vercel or Netlify will not keep the changes.

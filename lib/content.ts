@@ -5,7 +5,7 @@ import data from './content.json';
 
    REPLACING THE PHOTOGRAPHY
    Each entry in `images` is an Unsplash photo id plus alt text. To swap in real
-   The Shading Zone's photography, drop your files into /public/photography/ and change
+   All Time Solutions' photography, drop your files into /public/photography/ and change
    `imageUrl()` below to return `/photography/${id}.webp` (or similar). Nothing
    else in the codebase needs to change — every component asks for images through
    this one function.
@@ -78,8 +78,11 @@ const images = data.images as Record<string, { id: string; alt: string }>;
 
 /** Build a responsive Unsplash URL. Swap this out for local files when real photography arrives. */
 export function imageUrl(key: ImageKey | string, width = 1600, quality = 78): string {
+  // Full URLs (e.g. pasted into the admin dashboard) are used as-is.
+  if (/^(https?:)?\//.test(key as string)) return key as string;
   const entry = images[key as string];
   if (!entry) return '';
+  if (/^(https?:)?\//.test(entry.id)) return entry.id;
   return `https://images.unsplash.com/${entry.id}?auto=format&fit=crop&w=${width}&q=${quality}`;
 }
 

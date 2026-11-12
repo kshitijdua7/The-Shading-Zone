@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { products, collections, trustCards, processSteps, imageUrl, image } from '@/lib/live';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 
@@ -11,12 +12,10 @@ import { TickCards } from '@/components/Cards';
 import CTASection from '@/components/CTASection';
 import { LiquidMetalButton } from '@/components/ui/liquid-metal-button';
 
-import { products, collections, trustCards, processSteps, imageUrl, image } from '@/lib/content';
-
 export const metadata: Metadata = {
-  title: 'Custom Blinds, Shades & Curtains | The Shading Zone',
+  title: 'Custom Blinds, Shades & Curtains | All Time Solutions',
   description:
-    'The Shading Zone designs, manufactures and installs custom blinds, shades and curtains. Roller, zebra, roman, cellular, wood and motorized window coverings — with a free consultation.',
+    'All Time Solutions designs, manufactures and installs custom blinds, shades and curtains. Roller, zebra, roman, cellular, wood and motorized window coverings — with a free consultation.',
   alternates: { canonical: '/' },
 };
 
@@ -37,7 +36,7 @@ export default function HomePage() {
             </h2>
             <div className="reveal mt-9 space-y-6 text-base leading-[1.8] text-stone-600 sm:text-[1.0625rem]">
               <p>
-                At The Shading Zone, we believe window coverings should do more than control light. They
+                At All Time Solutions, we believe window coverings should do more than control light. They
                 should transform the way a space looks, feels and functions.
               </p>
               <p>
@@ -47,7 +46,7 @@ export default function HomePage() {
             </div>
             <div className="reveal mt-11 flex flex-wrap items-center gap-5">
               <Link href="/about" className="btn-solid">
-                Discover The Shading Zone
+                Discover All Time Solutions
               </Link>
               <Link
                 href="/blinds"
@@ -179,7 +178,7 @@ export default function HomePage() {
         <div className="shell">
           <SectionHeading
             eyebrow="Why us"
-            title="Why homeowners choose The Shading Zone"
+            title="Why homeowners choose All Time Solutions"
             lead="Everything below is something we actually do. You won't find invented statistics, borrowed awards or made-up reviews anywhere on this site."
           />
           <div className="mt-20">

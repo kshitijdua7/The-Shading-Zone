@@ -1,7 +1,7 @@
 'use client';
 
 /* ────────────────────────────────────────────────────────────────────────────
-   CINEMATIC HERO — The Shading Zone's signature moment.
+   CINEMATIC HERO — All Time Solutions' signature moment.
 
      open the site → premium room, blinds closed → scroll → blinds open →
      light floods in → the camera moves through the window → the brand appears.
@@ -169,7 +169,7 @@ export default function CinematicHero() {
   return (
     <section
       ref={wrapRef}
-      aria-label="The Shading Zone introduction"
+      aria-label="All Time Solutions introduction"
       style={{ height: reduced ? '100svh' : `${SCRUB_VH}vh` }}
       className="relative bg-char-950"
     >

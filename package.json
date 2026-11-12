@@ -1,8 +1,8 @@
 {
-  "name": "shading-zone",
+  "name": "all-time-solutions",
   "version": "1.0.0",
   "private": true,
-  "description": "The Shading Zone — custom blinds, shades, curtains and window coverings. Premium cinematic marketing site.",
+  "description": "All Time Solutions — custom blinds, shades, curtains and window coverings. Premium cinematic marketing site.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -31,15 +31,15 @@ const img = (key, w = 1200, cls = '', extra = '') => {
 };
 
 const CONTACT = {
-  phone: '(000) 000-0000',
-  email: 'hello@shadingzone.com',
+  phone: '(416) 317-5661',
+  email: 'alltimesolutions@gmail.com',
   area: '[Service area — add the cities and regions you cover]',
 };
 
 /* ── Fragments ──────────────────────────────────────────────────────────── */
 
 const wordmark = (cls = '') => `
-<svg class="wm ${cls}" viewBox="0 0 320 46" role="img" aria-label="The Shading Zone" fill="none">
+<svg class="wm ${cls}" viewBox="0 0 345 46" role="img" aria-label="All Time Solutions" fill="none">
   <rect x="0.6" y="0.6" width="36.8" height="44.8" rx="1.4" stroke="currentColor" stroke-width="1.2" opacity=".5"/>
   <rect x="5" y="6" width="28" height="4.4" fill="currentColor" opacity=".95"/>
   <rect x="5" y="13" width="28" height="3.6" fill="currentColor" opacity=".8"/>
@@ -47,8 +47,8 @@ const wordmark = (cls = '') => `
   <rect x="5" y="25" width="28" height="2" fill="currentColor" opacity=".44"/>
   <rect x="5" y="30" width="28" height="1.3" fill="currentColor" opacity=".28"/>
   <rect x="5" y="34.4" width="28" height=".8" fill="currentColor" opacity=".16"/>
-  <text x="52" y="31" fill="currentColor" font-family="Manrope, Helvetica Neue, Arial, sans-serif" font-size="25" font-weight="800" letter-spacing="1.1">SHADING</text>
-  <text x="178" y="31" fill="currentColor" font-family="Manrope, Helvetica Neue, Arial, sans-serif" font-size="25" font-weight="300" letter-spacing="4.2" opacity=".78">ZONE</text>
+  <text x="52" y="31" fill="currentColor" font-family="Manrope, Helvetica Neue, Arial, sans-serif" font-size="25" font-weight="800" letter-spacing="1.1">ALL TIME</text>
+  <text x="192" y="31" fill="currentColor" font-family="Manrope, Helvetica Neue, Arial, sans-serif" font-size="25" font-weight="300" letter-spacing="1.4" opacity=".78">SOLUTIONS</text>
 </svg>`;
 
 const NAV = [
@@ -70,7 +70,7 @@ const heroSlats = Array.from({ length: SLATS })
   .join('');
 
 const hero = `
-<section class="hero" id="hero" aria-label="The Shading Zone introduction">
+<section class="hero" id="hero" aria-label="All Time Solutions introduction">
   <div class="hero-pin">
     <div class="stage" aria-hidden="true">
       <div class="room">
@@ -207,7 +207,7 @@ const faqItems = data.faqs
 
 /* ── Page ───────────────────────────────────────────────────────────────── */
 
-const html = `<title>The Shading Zone</title>
+const html = `<title>All Time Solutions</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
@@ -448,7 +448,7 @@ footer a{font-size:.9rem;color:rgba(250,248,245,.7)}footer a:hover{color:var(--w
 
 <header class="nav over" id="nav">
   <div class="shell nav-in">
-    <a href="#home" data-goto="home" aria-label="The Shading Zone — home">${wordmark()}</a>
+    <a href="#home" data-goto="home" aria-label="All Time Solutions — home">${wordmark()}</a>
     <nav class="nav-links" id="navLinks">${NAV.map(([id, label]) => `<a href="#${id}" data-goto="${id}">${label}</a>`).join('')}</nav>
     <div style="display:flex;gap:.75rem;align-items:center">
       <a class="btn btn-solid" href="#quote" data-goto="quote" style="padding:.75rem 1.25rem;font-size:.66rem">Get a free quote</a>
@@ -468,9 +468,9 @@ footer a{font-size:.9rem;color:rgba(250,248,245,.7)}footer a:hover{color:var(--w
       <div>
         <p class="eyebrow rv">Introduction</p>
         <h2 class="d-md rv">Window coverings, made your way.</h2>
-        <p class="body rv">At The Shading Zone, we believe window coverings should do more than control light. They should transform the way a space looks, feels and functions.</p>
+        <p class="body rv">At All Time Solutions, we believe window coverings should do more than control light. They should transform the way a space looks, feels and functions.</p>
         <p class="body rv">From modern blinds to elegant curtains, we design and manufacture custom solutions tailored to your windows, your style and your lifestyle.</p>
-        <div class="btns rv"><a class="btn btn-solid" href="#about" data-goto="about">Discover The Shading Zone</a></div>
+        <div class="btns rv"><a class="btn btn-solid" href="#about" data-goto="about">Discover All Time Solutions</a></div>
       </div>
       <div class="rv" id="wingfx" style="aspect-ratio:4/5;position:relative;overflow:hidden;background:#0C0B0A;perspective:900px">
         <div class="sky" style="position:absolute;inset:0"></div>
@@ -511,7 +511,7 @@ footer a{font-size:.9rem;color:rgba(250,248,245,.7)}footer a:hover{color:var(--w
   <div class="band">
     <div class="shell">
       <p class="eyebrow rv">Why us</p>
-      <h2 class="d-md rv">Why homeowners choose The Shading Zone</h2>
+      <h2 class="d-md rv">Why homeowners choose All Time Solutions</h2>
       <p class="lead rv">Everything below is something we actually do. You won't find invented statistics, borrowed awards or made-up reviews anywhere on this site.</p>
       <ul class="trust">${trustCards}</ul>
     </div>
@@ -572,16 +572,16 @@ ${productPages}
 
 <section class="page" id="about">
   <header class="phero">${img('roomChairs', 1800, 'phero-img')}
-    <div class="phero-in shell"><p class="eyebrow light">About us</p><h1 class="d-lg">We believe every window deserves a better view.</h1><p class="lead-light">The Shading Zone designs, manufactures, supplies and installs custom window coverings. Five things that are usually five different companies — which is exactly why they so often go wrong.</p></div>
+    <div class="phero-in shell"><p class="eyebrow light">About us</p><h1 class="d-lg">We believe every window deserves a better view.</h1><p class="lead-light">All Time Solutions designs, manufactures, supplies and installs custom window coverings. Five things that are usually five different companies — which is exactly why they so often go wrong.</p></div>
   </header>
   <div class="shell sect">
     <div class="two">
       <div><h2 class="d-sm">Our story</h2>
       <p class="body">Most window covering problems are not really about the blind. They are about a measurement somebody took in a hurry, a stock size trimmed to nearly fit, or a fabric chosen from a photograph on a screen instead of held against the wall it has to live beside.</p>
-      <p class="body">The Shading Zone exists to remove those handoffs. We measure your windows ourselves. We manufacture to those measurements. We install what we made, and if something needs adjusting a month later, you call the people who made it.</p></div>
+      <p class="body">All Time Solutions exists to remove those handoffs. We measure your windows ourselves. We manufacture to those measurements. We install what we made, and if something needs adjusting a month later, you call the people who made it.</p></div>
       <figure style="aspect-ratio:4/5;overflow:hidden;background:var(--w100)">${img('fabricStack', 1200)}</figure>
     </div>
-    <h2 class="d-md" style="margin-top:5rem">Why The Shading Zone?</h2>
+    <h2 class="d-md" style="margin-top:5rem">Why All Time Solutions?</h2>
     <ul class="trust">${data.why.map((c) => `<li class="rv"><span class="tick">✓</span><h3>${esc(c.title)}</h3><p>${esc(c.text)}</p></li>`).join('')}</ul>
   </div>
 </section>
@@ -753,7 +753,7 @@ ${productPages}
       <div><h2>Company</h2><ul>${NAV.slice(6).map(([id, l]) => `<li><a href="#${id}" data-goto="${id}">${l}</a></li>`).join('')}<li><a href="#faq" data-goto="faq">FAQ</a></li></ul></div>
       <div><h2>Get in touch</h2><ul><li>${CONTACT.phone}</li><li>${CONTACT.email}</li><li style="color:rgba(250,248,245,.5)">${esc(CONTACT.area)}</li></ul></div>
     </div>
-    <div class="fbot"><p>© 2026 The Shading Zone. All rights reserved.</p><p>Privacy Policy · Terms &amp; Conditions</p></div>
+    <div class="fbot"><p>© 2026 All Time Solutions. All rights reserved.</p><p>Privacy Policy · Terms &amp; Conditions</p></div>
   </div>
 </footer>
 
