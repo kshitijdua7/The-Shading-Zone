@@ -29,8 +29,8 @@ export const site = {
 
     // TODO: replace with your real hours, or set `hours: null` to hide the block.
     hours: [
-      { days: 'Monday – Friday', time: '00:00 – 00:00' },
-      { days: 'Saturday', time: '00:00 – 00:00' },
+      { days: 'Monday – Friday', time: '10:00 AM – 6:00 PM' },
+      { days: 'Saturday', time: '10:00 AM – 6:00 PM' },
       { days: 'Sunday', time: 'Closed' },
     ] as { days: string; time: string }[] | null,
 
