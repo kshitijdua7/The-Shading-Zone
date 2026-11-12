@@ -19,7 +19,7 @@ export const site = {
     'All Time Solutions designs, manufactures, supplies and installs custom blinds, shades, curtains and window coverings. Free in-home and virtual consultations.',
 
   // TODO: replace with your live domain — used for canonical URLs, sitemap and OG tags.
-  url: 'https://www.alltimesolutions.com',
+  url: 'https://www.alltimesolutions.ca',
 
   contact: {
     phone: '(416) 317-5661',
