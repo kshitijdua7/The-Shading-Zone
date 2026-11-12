@@ -32,7 +32,7 @@ const img = (key, w = 1200, cls = '', extra = '') => {
 
 const CONTACT = {
   phone: '(416) 317-5661',
-  email: 'alltimesolutions@gmail.com',
+  email: 'alltimesolutions02@gmail.com',
   area: 'Serving all over the GTA',
 };
 

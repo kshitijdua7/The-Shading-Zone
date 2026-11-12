@@ -24,8 +24,8 @@ export const site = {
   contact: {
     phone: '(416) 317-5661',
     phoneHref: 'tel:+14163175661',
-    email: 'alltimesolutions@gmail.com',
-    emailHref: 'mailto:alltimesolutions@gmail.com',
+    email: 'alltimesolutions02@gmail.com',
+    emailHref: 'mailto:alltimesolutions02@gmail.com',
 
     // TODO: replace with your real hours, or set `hours: null` to hide the block.
     hours: [
