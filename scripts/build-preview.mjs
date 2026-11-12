@@ -33,7 +33,7 @@ const img = (key, w = 1200, cls = '', extra = '') => {
 const CONTACT = {
   phone: '(416) 317-5661',
   email: 'alltimesolutions@gmail.com',
-  area: '[Service area — add the cities and regions you cover]',
+  area: 'Serving all over the GTA',
 };
 
 /* ── Fragments ──────────────────────────────────────────────────────────── */

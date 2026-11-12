@@ -37,7 +37,7 @@ export const site = {
     // TODO: replace with the areas you actually service. Leave as-is and the site
     // simply invites people to ask — which is better than claiming coverage you
     // don't have.
-    serviceArea: '[Service area — add the cities and regions you cover]',
+    serviceArea: 'Serving all over the GTA',
 
     // TODO: set to a real address to show the location block and enable the map.
     // Leave `null` if you operate without a public showroom.
