@@ -23,7 +23,10 @@ import { site as defaultSite } from './site';
    your own server). Back up the data folder like you would a database.
    ──────────────────────────────────────────────────────────────────────────── */
 
-const DATA_DIR = process.env.DATA_DIR || path.join(process.cwd(), 'data');
+// On Vercel the project folder is read-only; /tmp is the only writable place
+// (and it is wiped regularly — see note above).
+const DATA_DIR =
+  process.env.DATA_DIR || (process.env.VERCEL ? '/tmp/ats-data' : path.join(process.cwd(), 'data'));
 
 export type Content = typeof defaultContent;
 export type Site = typeof defaultSite;
@@ -46,7 +49,11 @@ export interface Lead {
 }
 
 function ensureDir() {
-  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
+  try {
+    if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
+  } catch {
+    /* read-only disk — writes will fail and be reported by the caller */
+  }
 }
 
 const cache = new Map<string, { mtime: number; value: unknown }>();
@@ -56,7 +63,11 @@ function readJson<T>(name: string, fallback: () => T): T {
   const file = path.join(DATA_DIR, name);
   if (!fs.existsSync(file)) {
     const value = fallback();
-    writeJson(name, value);
+    try {
+      writeJson(name, value);
+    } catch {
+      /* read-only disk: serve the defaults rather than crash the page */
+    }
     return value;
   }
   const mtime = fs.statSync(file).mtimeMs;
