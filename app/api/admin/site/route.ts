@@ -15,13 +15,13 @@ export async function PUT(req: Request) {
   const body = await req.json().catch(() => null);
   if (!body || typeof body !== 'object' || Array.isArray(body))
     return NextResponse.json({ error: 'Settings must be a JSON object.' }, { status: 400 });
-  saveSite(body as Site);
+  await saveSite(body as Site);
   return NextResponse.json({ ok: true });
 }
 
 /** Restore the original site settings. */
 export async function DELETE() {
   if (!(await requireAdmin())) return denied();
-  resetSite();
+  await resetSite();
   return NextResponse.json({ ok: true });
 }

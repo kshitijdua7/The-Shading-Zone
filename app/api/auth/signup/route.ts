@@ -9,11 +9,11 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'Enter a valid email address.' }, { status: 400 });
   if (String(password).length < 8)
     return NextResponse.json({ error: 'Password must be at least 8 characters.' }, { status: 400 });
-  if (findUserByEmail(email))
+  if (await findUserByEmail(String(email)))
     return NextResponse.json({ error: 'An account with this email already exists. Log in instead.' }, { status: 409 });
 
-  const user = createUser(String(name), String(email), hashPassword(String(password)));
+  const user = await createUser(String(name), String(email), hashPassword(String(password)));
   const res = NextResponse.json({ user: toPublic(user) });
-  res.cookies.set(SESSION_COOKIE, createSessionToken(user.id), sessionCookieOptions(req));
+  res.cookies.set(SESSION_COOKIE, await createSessionToken(user.id), sessionCookieOptions(req));
   return res;
 }

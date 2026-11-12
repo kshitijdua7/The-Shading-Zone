@@ -1,7 +1,7 @@
 import 'server-only';
 import crypto from 'node:crypto';
 import { cookies } from 'next/headers';
-import { getSecret, getUsers, type User } from './store';
+import { getSecret, getUserById, type User } from './store';
 
 export const SESSION_COOKIE = 'ats_session';
 const SESSION_DAYS = 30;
@@ -24,22 +24,22 @@ export function verifyPassword(password: string, stored: string): boolean {
 
 /* ── Sessions (HMAC-signed cookie) ──────────────────────────────────────── */
 
-function sign(payload: string) {
-  return crypto.createHmac('sha256', getSecret()).update(payload).digest('base64url');
+async function sign(payload: string) {
+  return crypto.createHmac('sha256', await getSecret()).update(payload).digest('base64url');
 }
 
-export function createSessionToken(userId: string): string {
+export async function createSessionToken(userId: string): Promise<string> {
   const payload = Buffer.from(
     JSON.stringify({ uid: userId, exp: Date.now() + SESSION_DAYS * 864e5 })
   ).toString('base64url');
-  return `${payload}.${sign(payload)}`;
+  return `${payload}.${await sign(payload)}`;
 }
 
-function readToken(token: string | undefined): string | null {
+async function readToken(token: string | undefined): Promise<string | null> {
   if (!token) return null;
   const [payload, sig] = token.split('.');
   if (!payload || !sig) return null;
-  const expected = sign(payload);
+  const expected = await sign(payload);
   if (sig.length !== expected.length || !crypto.timingSafeEqual(Buffer.from(sig), Buffer.from(expected)))
     return null;
   try {
@@ -64,9 +64,9 @@ export function sessionCookieOptions(req: Request) {
 
 export async function getCurrentUser(): Promise<User | null> {
   const jar = await cookies();
-  const uid = readToken(jar.get(SESSION_COOKIE)?.value);
+  const uid = await readToken(jar.get(SESSION_COOKIE)?.value);
   if (!uid) return null;
-  return getUsers().find((u) => u.id === uid) ?? null;
+  return getUserById(uid);
 }
 
 export async function requireAdmin(): Promise<User | null> {

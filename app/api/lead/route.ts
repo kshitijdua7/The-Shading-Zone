@@ -14,6 +14,6 @@ export async function POST(req: Request) {
   if (Object.keys(fields).length === 0 || Object.keys(fields).length > 80)
     return NextResponse.json({ error: 'Invalid submission.' }, { status: 400 });
 
-  addLead(fields);
+  await addLead(fields);
   return NextResponse.json({ ok: true });
 }

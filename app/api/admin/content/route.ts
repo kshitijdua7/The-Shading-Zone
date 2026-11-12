@@ -15,13 +15,13 @@ export async function PUT(req: Request) {
   const body = await req.json().catch(() => null);
   if (!body || typeof body !== 'object' || Array.isArray(body))
     return NextResponse.json({ error: 'Content must be a JSON object.' }, { status: 400 });
-  saveContent(body as Content);
+  await saveContent(body as Content);
   return NextResponse.json({ ok: true });
 }
 
 /** Restore the original website content. */
 export async function DELETE() {
   if (!(await requireAdmin())) return denied();
-  resetContent();
+  await resetContent();
   return NextResponse.json({ ok: true });
 }
