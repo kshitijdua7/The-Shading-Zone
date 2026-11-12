@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
-import { productBySlug, image, imageUrl } from '@/lib/live';
+import { productBySlug, imageUrl } from '@/lib/live';
 import Link from 'next/link';
 import { PageHero, Section, SectionHeading } from '@/components/Section';
 import CurtainReveal from '@/components/CurtainReveal';
+import CurtainStyles from '@/components/CurtainStyles';
 import FaqAccordion from '@/components/FaqAccordion';
 import { LiquidMetalButton } from '@/components/ui/liquid-metal-button';
 
@@ -12,15 +13,6 @@ export const metadata: Metadata = {
     'Sheer, blackout, lined and layered custom curtains. Pinch pleat, ripple fold, grommet and rod pocket headers, custom fabrics and motorized tracks from All Time Solutions.',
   alternates: { canonical: '/curtains' },
 };
-
-const TYPES = [
-  { name: 'Sheer curtains', text: 'A soft veil that keeps the room bright and takes the hard edge off daylight. Beautiful layered in front of, or behind, something heavier.', img: 'curtainSheer' },
-  { name: 'Blackout curtains', text: 'Lined to stop light rather than filter it. The right answer for bedrooms, nurseries and rooms with a screen in them.', img: 'curtainFull' },
-  { name: 'Drapery', text: 'Full-length panels in a real drapery weight, hung high and stacked properly. This is the treatment that makes a room feel finished.', img: 'roomDrapery' },
-  { name: 'Layered curtains', text: 'A sheer and an opaque panel on the same window, on a double track. Maximum flexibility, morning to night.', img: 'sheerLeaves' },
-  { name: 'Custom fabrics', text: 'Linen, cotton, velvet, faux silk, wool-look wovens and voiles — chosen against your walls, in your light.', img: 'sampleBook' },
-  { name: 'Motorized curtains', text: 'A quiet traverse track that draws your panels on a remote, a wall switch, or a schedule where the system supports it.', img: 'entrance' },
-] as const;
 
 const HEADERS = [
   { name: 'Pinch pleat', note: 'Tailored, structured, traditional-leaning. Deep even folds.' },
@@ -60,29 +52,16 @@ export default function CurtainsPage() {
         </div>
       </Section>
 
-      {/* Types */}
-      <Section tone="off">
+      {/* Styles */}
+      <Section tone="off" id="styles" className="scroll-mt-[var(--nav-h)]">
         <div className="shell">
-          <SectionHeading eyebrow="What we make" title="Six directions" />
-          <div className="mt-20 grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3" data-reveal-stagger>
-            {TYPES.map((t) => {
-              const img = image(t.img, 800);
-              return (
-                <article key={t.name} className="reveal group">
-                  <div className="aspect-[4/5] overflow-hidden bg-warm-100">
-                    <img
-                      src={img.src}
-                      alt={img.alt}
-                      loading="lazy"
-                      decoding="async"
-                      className="h-full w-full object-cover transition-transform duration-[1.1s] ease-luxe group-hover:scale-[1.05]"
-                    />
-                  </div>
-                  <h3 className="mt-6 text-base font-bold uppercase tracking-tight text-char-950">{t.name}</h3>
-                  <p className="mt-3 text-[0.92rem] leading-[1.75] text-stone-600">{t.text}</p>
-                </article>
-              );
-            })}
+          <SectionHeading
+            eyebrow="What we make"
+            title="Eight directions"
+            lead="Every one is made to your measurements, in the fabric, lining and length you choose."
+          />
+          <div className="mt-20">
+            <CurtainStyles variant="detail" />
           </div>
         </div>
       </Section>

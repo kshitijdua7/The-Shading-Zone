@@ -67,6 +67,13 @@ export interface GalleryCategory {
   images: ImageKey[];
 }
 
+export interface CurtainStyle {
+  name: string;
+  tagline: string;
+  text: string;
+  image: ImageKey;
+}
+
 export interface BeforeAfterPair {
   title: string;
   before: ImageKey;
@@ -104,6 +111,7 @@ export const whyCards = data.why as { title: string; text: string }[];
 export const galleryCategories = data.galleryCategories as unknown as GalleryCategory[];
 export const beforeAfterPairs = data.beforeAfter as unknown as BeforeAfterPair[];
 export const faqs = data.faqs as unknown as Faq[];
+export const curtainStyles = data.curtainStyles as unknown as CurtainStyle[];
 export const commercialSectors = data.commercialSectors as { title: string; text: string }[];
 export const tradePartners = data.tradePartners as { title: string; text: string }[];
 

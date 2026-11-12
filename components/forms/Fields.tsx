@@ -213,7 +213,7 @@ export function RadioCards({
             className={cn(
               'group relative flex min-h-[64px] cursor-pointer flex-col justify-center gap-1 border px-5 py-4 transition-all duration-200',
               'border-char-950/15 hover:border-char-950/45',
-              'has-[:checked]:border-char-950 has-[:checked]:bg-char-950 has-[:checked]:text-warm-white',
+              'has-[:checked]:border-solid has-[:checked]:bg-solid has-[:checked]:text-on-solid',
               'has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-brass',
               error && 'border-red-600'
             )}
@@ -260,7 +260,7 @@ export function CheckboxCards({
             className={cn(
               'inline-flex min-h-[46px] cursor-pointer items-center border px-5 py-2.5 text-sm transition-all duration-200',
               'border-char-950/15 hover:border-char-950/45',
-              'has-[:checked]:border-char-950 has-[:checked]:bg-char-950 has-[:checked]:text-warm-white',
+              'has-[:checked]:border-solid has-[:checked]:bg-solid has-[:checked]:text-on-solid',
               'has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-brass'
             )}
           >
@@ -305,8 +305,8 @@ export function FileField({
         aria-describedby={cn(hint && `${id}-hint`, error && `${id}-error`) || undefined}
         className={cn(
           'block w-full cursor-pointer border border-dashed px-4 py-6 text-sm text-stone-600',
-          'file:mr-4 file:cursor-pointer file:border-0 file:bg-char-950 file:px-5 file:py-2.5',
-          'file:text-[0.66rem] file:font-semibold file:uppercase file:tracking-[0.16em] file:text-warm-white',
+          'file:mr-4 file:cursor-pointer file:border-0 file:bg-solid file:px-5 file:py-2.5',
+          'file:text-[0.66rem] file:font-semibold file:uppercase file:tracking-[0.16em] file:text-on-solid',
           error ? 'border-red-600' : 'border-char-950/20 hover:border-char-950/40'
         )}
       />

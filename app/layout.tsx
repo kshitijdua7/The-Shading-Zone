@@ -7,6 +7,9 @@ import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
 import ScrollRevealProvider from '@/components/ScrollRevealProvider';
 
+/* Applies the visitor's saved mode / palette before first paint (no flash). */
+const THEME_BOOT = `(function(){try{var d=document.documentElement,m=localStorage.getItem('ats-mode'),p=localStorage.getItem('ats-palette');if(m==='dark')d.dataset.mode='dark';if(p&&p!=='sand')d.dataset.palette=p;}catch(e){}})();`;
+
 /* ────────────────────────────────────────────────────────────────────────────
    TYPEFACES
 
@@ -104,8 +107,10 @@ const organizationJsonLd = () => ({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
+        {/* eslint-disable-next-line react/no-danger */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_BOOT }} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="stylesheet" href={GOOGLE_FONTS_HREF} />

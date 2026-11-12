@@ -39,9 +39,9 @@ export default function FloatingCTA() {
       href="/consultation"
       className={cn(
         'fixed bottom-[max(1.25rem,env(safe-area-inset-bottom))] right-[max(1.25rem,env(safe-area-inset-right))] z-40',
-        'inline-flex min-h-[52px] items-center gap-2.5 rounded-full bg-char-950 px-6 py-3.5 text-[0.7rem]',
-        'font-semibold uppercase tracking-[0.16em] text-warm-white shadow-lift-lg',
-        'transition-all duration-500 ease-luxe hover:bg-brass',
+        'inline-flex min-h-[52px] items-center gap-2.5 rounded-full bg-solid px-6 py-3.5 text-[0.7rem]',
+        'font-semibold uppercase tracking-[0.16em] text-on-solid shadow-lift-lg',
+        'transition-all duration-500 ease-luxe hover:bg-brass hover:text-white',
         show ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-6 opacity-0'
       )}
       tabIndex={show ? 0 : -1}

@@ -71,7 +71,7 @@ export default function AboutPage() {
             title="Five things, one company"
             lead="Custom manufacturing. Design. Quality materials. Professional installation. Personalised service."
           />
-          <div className="mt-20 grid gap-px overflow-hidden border border-char-950/10 bg-char-950/10 sm:grid-cols-2 lg:grid-cols-5" data-reveal-stagger>
+          <div className="mt-20 grid gap-px overflow-hidden border border-char-950/10 bg-line/10 sm:grid-cols-2 lg:grid-cols-5" data-reveal-stagger>
             {[
               ['Custom manufacturing', 'We build what we sell, to your measurements.'],
               ['Design', 'Product, fabric, colour and operation chosen for your rooms.'],

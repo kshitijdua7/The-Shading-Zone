@@ -49,7 +49,7 @@ export default function ProcessTimeline({ steps }: { steps: Step[] }) {
       {/* Spine */}
       <div
         aria-hidden="true"
-        className="absolute bottom-0 left-[13px] top-2 w-px bg-char-950/10 md:left-1/2 md:-translate-x-1/2"
+        className="absolute bottom-0 left-[13px] top-2 w-px bg-line/10 md:left-1/2 md:-translate-x-1/2"
       >
         <div
           ref={spineRef}

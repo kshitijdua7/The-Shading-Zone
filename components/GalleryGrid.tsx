@@ -100,7 +100,7 @@ export default function GalleryGrid({
             aria-pressed={filter === c.slug}
             className={`min-h-[44px] shrink-0 whitespace-nowrap border px-5 py-2.5 text-[0.66rem] font-semibold uppercase tracking-[0.16em] transition-all duration-300 ${
               filter === c.slug
-                ? 'border-char-950 bg-char-950 text-warm-white'
+                ? 'border-solid bg-solid text-on-solid'
                 : 'border-char-950/15 text-stone-600 hover:border-char-950/45 hover:text-char-950'
             }`}
           >
@@ -159,7 +159,7 @@ export default function GalleryGrid({
             <button
               type="button"
               onClick={close}
-              className="grid h-11 w-11 place-items-center rounded-full border border-warm-white/25 text-warm-white transition-colors hover:bg-warm-white hover:text-char-950"
+              className="grid h-11 w-11 place-items-center rounded-full border border-warm-white/25 text-warm-white transition-colors hover:bg-paper hover:text-night"
             >
               <X className="h-4 w-4" aria-hidden="true" />
               <span className="sr-only">Close</span>
@@ -170,7 +170,7 @@ export default function GalleryGrid({
             <button
               type="button"
               onClick={() => step(-1)}
-              className="absolute left-3 z-10 grid h-12 w-12 place-items-center rounded-full border border-warm-white/25 text-warm-white transition-colors hover:bg-warm-white hover:text-char-950 sm:left-6"
+              className="absolute left-3 z-10 grid h-12 w-12 place-items-center rounded-full border border-warm-white/25 text-warm-white transition-colors hover:bg-paper hover:text-night sm:left-6"
             >
               <ChevronLeft className="h-5 w-5" aria-hidden="true" />
               <span className="sr-only">Previous image</span>
@@ -185,7 +185,7 @@ export default function GalleryGrid({
             <button
               type="button"
               onClick={() => step(1)}
-              className="absolute right-3 z-10 grid h-12 w-12 place-items-center rounded-full border border-warm-white/25 text-warm-white transition-colors hover:bg-warm-white hover:text-char-950 sm:right-6"
+              className="absolute right-3 z-10 grid h-12 w-12 place-items-center rounded-full border border-warm-white/25 text-warm-white transition-colors hover:bg-paper hover:text-night sm:right-6"
             >
               <ChevronRight className="h-5 w-5" aria-hidden="true" />
               <span className="sr-only">Next image</span>
@@ -194,7 +194,7 @@ export default function GalleryGrid({
 
           <div className="flex flex-col items-center gap-4 px-gutter py-7 text-center">
             <p className="max-w-prose text-sm text-warm-white/65">{image(current.key).alt}</p>
-            <Link href="/consultation" className="btn bg-warm-white text-char-950 hover:bg-brass hover:text-white">
+            <Link href="/consultation" className="btn bg-paper text-night hover:bg-brass hover:text-white">
               Get this look
             </Link>
           </div>

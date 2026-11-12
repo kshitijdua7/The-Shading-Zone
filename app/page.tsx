@@ -7,6 +7,7 @@ import CinematicHero from '@/components/hero/CinematicHero';
 import { Section, SectionHeading } from '@/components/Section';
 import WindowGraphic from '@/components/WindowGraphic';
 import ProductCard from '@/components/ProductCard';
+import CurtainStyles from '@/components/CurtainStyles';
 import HorizontalScroller from '@/components/HorizontalScroller';
 import { TickCards } from '@/components/Cards';
 import CTASection from '@/components/CTASection';
@@ -21,6 +22,9 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   const galleryPreview = ['roomDrapery', 'woodShadow', 'curtainSheer', 'dining'] as const;
+  // Curtains lead the range.
+  const isCurtains = (slug: string) => slug === 'custom-curtains-drapery';
+  const range = [...products.filter((p) => isCurtains(p.slug)), ...products.filter((p) => !isCurtains(p.slug))];
 
   return (
     <>
@@ -63,14 +67,42 @@ export default function HomePage() {
         </div>
       </Section>
 
+      {/* ── Curtains spotlight ────────────────────────────────────────────── */}
+      <Section tone="off" id="curtains">
+        <div className="shell">
+          <div className="flex flex-wrap items-end justify-between gap-8">
+            <SectionHeading
+              eyebrow="Featured · Curtains & drapery"
+              title="Custom curtains, made to measure"
+              lead="Sheer, blackout, pleated or layered — every panel is made for your window and hung by our own installers. Pick a direction below, or let us bring the fabric books to you."
+            />
+            <div className="reveal flex shrink-0 flex-wrap items-center gap-5 pb-2">
+              <Link href="/curtains" className="btn-solid">
+                Explore curtains
+              </Link>
+              <Link
+                href="/quote"
+                className="link-draw text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-char-950"
+              >
+                Get a curtain quote
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-20">
+            <CurtainStyles />
+          </div>
+        </div>
+      </Section>
+
       {/* ── Product categories ────────────────────────────────────────────── */}
-      <Section tone="off" id="products">
+      <Section id="products">
         <div className="shell">
           <div className="flex flex-wrap items-end justify-between gap-8">
             <SectionHeading
               eyebrow="The range"
               title="Find your perfect shade"
-              lead="Ten product families, every one made to the measurements we take at your window. Hover any card to see it move."
+              lead="Curtains, blinds and shades — ten product families, every one made to the measurements we take at your window. Hover any card to see it move."
             />
             <Link
               href="/blinds"
@@ -84,7 +116,7 @@ export default function HomePage() {
             className="mt-20 grid gap-x-6 gap-y-16 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
             data-reveal-stagger
           >
-            {products.map((p, i) => (
+            {range.map((p, i) => (
               <ProductCard key={p.slug} product={p} index={i} eager={i < 4} />
             ))}
           </div>
@@ -120,7 +152,7 @@ export default function HomePage() {
             lead="Seven steps, all of them ours. We consult, measure, design, manufacture, inspect, install — and stay reachable afterwards."
           />
 
-          <ol className="mt-20 grid gap-px overflow-hidden border border-char-950/10 bg-char-950/10 sm:grid-cols-2 lg:grid-cols-4" data-reveal-stagger>
+          <ol className="mt-20 grid gap-px overflow-hidden border border-char-950/10 bg-line/10 sm:grid-cols-2 lg:grid-cols-4" data-reveal-stagger>
             {processSteps.slice(0, 4).map((s) => (
               <li key={s.n} className="reveal group bg-warm-white p-9 transition-colors duration-500 hover:bg-warm-50">
                 <p className="font-display text-4xl font-extrabold leading-none text-char-950/12 transition-colors duration-500 group-hover:text-brass/45">

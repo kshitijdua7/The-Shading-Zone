@@ -69,7 +69,7 @@ export default function CommercialPage() {
             the problem. We&rsquo;ll come back with a specification and a quote.
           </p>
           <div className="reveal mt-11 flex flex-col gap-3 sm:flex-row">
-            <Link href="/quote" className="btn bg-warm-white text-char-950 hover:bg-brass hover:text-white">
+            <Link href="/quote" className="btn bg-paper text-night hover:bg-brass hover:text-white">
               Discuss your project
             </Link>
             <Link href="/trade" className="btn-light">Trade &amp; designer partnerships</Link>

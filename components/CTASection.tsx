@@ -133,7 +133,7 @@ export default function CTASection() {
           Let&rsquo;s create something that fits your space perfectly.
         </p>
         <div className="mt-11 flex flex-col items-stretch gap-3 sm:flex-row">
-          <Link href="/consultation" className="btn bg-warm-white text-char-950 hover:bg-brass hover:text-white">
+          <Link href="/consultation" className="btn bg-paper text-night hover:bg-brass hover:text-white">
             Book a free consultation
           </Link>
           <Link href="/quote" className="btn-light">

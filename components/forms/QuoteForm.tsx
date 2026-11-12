@@ -114,7 +114,7 @@ export default function QuoteForm() {
                 className={cn(
                   'grid h-9 w-9 shrink-0 place-items-center rounded-full border text-xs font-semibold transition-colors duration-300',
                   done && 'border-brass bg-brass text-white',
-                  active && !done && 'border-char-950 bg-char-950 text-warm-white',
+                  active && !done && 'border-solid bg-solid text-on-solid',
                   !done && !active && 'border-char-950/20 text-stone-400'
                 )}
               >

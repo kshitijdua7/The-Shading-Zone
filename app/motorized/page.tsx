@@ -78,7 +78,7 @@ export default function MotorizedPage() {
       <Section>
         <div className="shell">
           <SectionHeading eyebrow="Power" title="Three ways to power a motor" />
-          <div className="mt-16 grid gap-px overflow-hidden border border-char-950/10 bg-char-950/10 md:grid-cols-3" data-reveal-stagger>
+          <div className="mt-16 grid gap-px overflow-hidden border border-char-950/10 bg-line/10 md:grid-cols-3" data-reveal-stagger>
             {[
               ['Battery', 'Retrofits into a finished home with no electrical work. The simplest option by far, and the one most people end up with.'],
               ['Plug-in', 'A low-voltage adaptor to a nearby outlet. No batteries to change, minimal disruption.'],

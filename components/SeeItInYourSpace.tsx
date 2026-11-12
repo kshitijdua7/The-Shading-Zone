@@ -89,7 +89,7 @@ export default function SeeItInYourSpace({
                 className={cn(
                   'min-h-[48px] border px-4 py-3 text-sm transition-all duration-200',
                   opacity.id === o.id
-                    ? 'border-char-950 bg-char-950 text-warm-white'
+                    ? 'border-solid bg-solid text-on-solid'
                     : 'border-char-950/15 text-stone-600 hover:border-char-950/45 hover:text-char-950'
                 )}
               >

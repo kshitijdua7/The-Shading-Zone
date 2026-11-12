@@ -23,7 +23,7 @@ export function TickCards({ items }: { items: { title: string; text: string }[] 
 /** Plain numbered cards, used for sector and partner lists. */
 export function NumberCards({ items }: { items: { title: string; text: string }[] }) {
   return (
-    <ul className="grid gap-px overflow-hidden border border-char-950/10 bg-char-950/10 sm:grid-cols-2 lg:grid-cols-3" data-reveal-stagger>
+    <ul className="grid gap-px overflow-hidden border border-char-950/10 bg-line/10 sm:grid-cols-2 lg:grid-cols-3" data-reveal-stagger>
       {items.map((c, i) => (
         <li key={c.title} className="reveal bg-warm-white p-9 transition-colors duration-500 hover:bg-warm-50">
           <p className="font-display text-xs font-semibold tracking-[0.24em] text-brass">

@@ -227,7 +227,7 @@ export default function CinematicHero() {
             Custom blinds and curtains, designed and manufactured for the way you live.
           </p>
           <div className="mt-10 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
-            <Link href="/consultation" className="btn-light bg-warm-white text-char-950 hover:bg-warm-50">
+            <Link href="/consultation" className="btn-light bg-paper text-night hover:bg-warm-50">
               Book a free consultation
             </Link>
             <Link href="/collections" className="btn-light">

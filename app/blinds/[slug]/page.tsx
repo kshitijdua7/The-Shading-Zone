@@ -233,7 +233,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             advice — including when something else would suit you better.
           </p>
           <div className="reveal mt-11 flex flex-col gap-3 sm:flex-row">
-            <Link href="/consultation" className="btn bg-warm-white text-char-950 hover:bg-brass hover:text-white">
+            <Link href="/consultation" className="btn bg-paper text-night hover:bg-brass hover:text-white">
               Book a free consultation
             </Link>
             <Link href="/quote" className="btn-light">Get a free quote</Link>

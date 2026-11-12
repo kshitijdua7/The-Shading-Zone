@@ -1,5 +1,6 @@
 import 'server-only';
 import { getContent, getSite } from './store';
+import defaultContent from './content.json';
 import type {
   Product,
   Collection,
@@ -7,6 +8,7 @@ import type {
   Faq,
   GalleryCategory,
   BeforeAfterPair,
+  CurtainStyle,
   ImageKey,
 } from './content';
 
@@ -36,7 +38,25 @@ function live<T extends object>(resolve: () => T): T {
   });
 }
 
-const c = () => getContent() as unknown as Record<string, unknown>;
+/**
+ * Content saved from the dashboard may predate sections added to the site
+ * later. Anything it lacks (a whole section, or individual images) comes from
+ * the defaults in content.json.
+ */
+const merged = new WeakMap<object, Record<string, unknown>>();
+const c = () => {
+  const stored = getContent() as unknown as Record<string, unknown>;
+  let out = merged.get(stored);
+  if (!out) {
+    out = {
+      ...defaultContent,
+      ...stored,
+      images: { ...defaultContent.images, ...(stored.images as object) },
+    };
+    merged.set(stored, out);
+  }
+  return out;
+};
 
 export const site = live(() => getSite());
 export const products = live(() => c().products as Product[]);
@@ -48,6 +68,7 @@ export const whyCards = live(() => c().why as { title: string; text: string }[])
 export const galleryCategories = live(() => c().galleryCategories as GalleryCategory[]);
 export const beforeAfterPairs = live(() => c().beforeAfter as BeforeAfterPair[]);
 export const faqs = live(() => c().faqs as Faq[]);
+export const curtainStyles = live(() => c().curtainStyles as CurtainStyle[]);
 export const commercialSectors = live(() => c().commercialSectors as { title: string; text: string }[]);
 export const tradePartners = live(() => c().tradePartners as { title: string; text: string }[]);
 

@@ -6,6 +6,19 @@ import type { Config } from 'tailwindcss';
  * with a single muted brass accent. Nothing here is decorative for its own sake;
  * every token maps to something used on the site.
  */
+const v = (name: string) => `rgb(var(--${name}) / <alpha-value>)`;
+
+/*
+ * Every colour is a CSS variable (defined in app/globals.css) so the theme
+ * switcher can change mode (light / dark) and palette at runtime.
+ *
+ *   warm-*   page surfaces as backgrounds; the fixed light tone as text/borders
+ *   char-*   fixed dark surfaces as backgrounds; "ink" (flips in dark mode) as text/borders
+ *   paper / night   always-light / always-dark, for use on photos and dark bands
+ *   solid / on-solid   the high-contrast button pair, flips with the mode
+ */
+const ink = { 700: v('ink-700'), 800: v('ink-800'), 900: v('ink-900'), 950: v('ink-950') };
+
 const config: Config = {
   content: [
     './app/**/*.{ts,tsx}',
@@ -16,28 +29,50 @@ const config: Config = {
     extend: {
       colors: {
         warm: {
-          white: '#FAF8F5',
-          50: '#F5F1EB',
-          100: '#EDE7DE',
-          200: '#E0D7C9',
-          300: '#CDC1AF',
+          white: v('sf-white'),
+          50: v('sf-50'),
+          100: v('sf-100'),
+          200: v('sf-200'),
+          300: v('sf-300'),
         },
         stone: {
-          400: '#A9A199',
-          500: '#8A8279',
-          600: '#6B645C',
+          400: v('stone-400'),
+          500: v('stone-500'),
+          600: v('stone-600'),
         },
         char: {
-          700: '#3A3633',
-          800: '#262321',
-          900: '#171514',
-          950: '#0C0B0A',
+          700: v('char-700'),
+          800: v('char-800'),
+          900: v('char-900'),
+          950: v('char-950'),
         },
         brass: {
-          DEFAULT: '#B08D57',
-          light: '#C9A87C',
-          dark: '#8C6E42',
+          DEFAULT: v('brass'),
+          light: v('brass-light'),
+          dark: v('brass-dark'),
         },
+        paper: v('paper-white'),
+        night: v('char-950'),
+        solid: v('solid'),
+        'on-solid': v('on-solid'),
+        line: v('ink-950'),
+      },
+      backgroundColor: {
+        white: v('sf-card'),
+      },
+      textColor: {
+        char: ink,
+        warm: {
+          white: v('paper-white'),
+          50: v('paper-50'),
+          100: v('paper-100'),
+          200: v('paper-200'),
+          300: v('paper-300'),
+        },
+      },
+      borderColor: {
+        char: ink,
+        warm: { white: v('paper-white') },
       },
       fontFamily: {
         display: ['var(--font-display)', 'Helvetica Neue', 'Arial', 'sans-serif'],

@@ -11,10 +11,124 @@
     --font-body: 'Inter';
     --font-editorial: 'Instrument Serif';
 
-    --sz-warm-white: #faf8f5;
-    --sz-char-950: #0c0b0a;
-    --sz-brass: #b08d57;
     --nav-h: 76px;
+
+    /* ── Palette: Sand (default). RGB triplets so Tailwind can add alpha. ── */
+    --p-white: 250 248 245;
+    --p-50: 245 241 235;
+    --p-100: 237 231 222;
+    --p-200: 224 215 201;
+    --p-300: 205 193 175;
+    --p-stone-400: 169 161 153;
+    --p-stone-500: 138 130 121;
+    --p-stone-600: 107 100 92;
+    --char-700: 58 54 51;
+    --char-800: 38 35 33;
+    --char-850: 30 28 26;
+    --char-900: 23 21 20;
+    --char-950: 12 11 10;
+    --brass: 176 141 87;
+    --brass-light: 201 168 124;
+    --brass-dark: 140 110 66;
+
+    /* ── Roles (light mode). Dark mode re-points these below. ── */
+    --sf-white: var(--p-white);
+    --sf-50: var(--p-50);
+    --sf-100: var(--p-100);
+    --sf-200: var(--p-200);
+    --sf-300: var(--p-300);
+    --sf-card: 255 255 255;
+    --paper-white: var(--p-white);
+    --paper-50: var(--p-50);
+    --paper-100: var(--p-100);
+    --paper-200: var(--p-200);
+    --paper-300: var(--p-300);
+    --ink-700: var(--char-700);
+    --ink-800: var(--char-800);
+    --ink-900: var(--char-900);
+    --ink-950: var(--char-950);
+    --stone-400: var(--p-stone-400);
+    --stone-500: var(--p-stone-500);
+    --stone-600: var(--p-stone-600);
+    --solid: var(--char-950);
+    --on-solid: var(--p-white);
+    color-scheme: light;
+  }
+
+  /* ── Palettes ─────────────────────────────────────────────────────────── */
+  :root[data-palette='sage'] {
+    --p-white: 246 248 244;
+    --p-50: 238 242 234;
+    --p-100: 227 233 221;
+    --p-200: 211 220 203;
+    --p-300: 187 200 177;
+    --p-stone-400: 157 165 156;
+    --p-stone-500: 125 134 124;
+    --p-stone-600: 95 104 95;
+    --char-700: 52 59 53;
+    --char-800: 34 40 36;
+    --char-850: 27 32 28;
+    --char-900: 20 24 21;
+    --char-950: 10 13 11;
+    --brass: 111 143 107;
+    --brass-light: 157 184 150;
+    --brass-dark: 85 115 83;
+  }
+  :root[data-palette='ocean'] {
+    --p-white: 245 248 250;
+    --p-50: 236 241 245;
+    --p-100: 223 231 238;
+    --p-200: 203 215 226;
+    --p-300: 176 193 209;
+    --p-stone-400: 154 163 173;
+    --p-stone-500: 122 132 143;
+    --p-stone-600: 92 102 112;
+    --char-700: 50 58 68;
+    --char-800: 32 38 46;
+    --char-850: 25 30 37;
+    --char-900: 19 23 28;
+    --char-950: 9 12 16;
+    --brass: 79 124 168;
+    --brass-light: 134 169 203;
+    --brass-dark: 59 97 137;
+  }
+  :root[data-palette='terracotta'] {
+    --p-white: 251 246 244;
+    --p-50: 246 237 233;
+    --p-100: 238 224 218;
+    --p-200: 227 206 197;
+    --p-300: 210 181 169;
+    --p-stone-400: 173 157 150;
+    --p-stone-500: 142 125 118;
+    --p-stone-600: 110 95 89;
+    --char-700: 64 52 47;
+    --char-800: 42 33 30;
+    --char-850: 34 26 23;
+    --char-900: 26 20 18;
+    --char-950: 14 10 9;
+    --brass: 181 101 74;
+    --brass-light: 212 150 128;
+    --brass-dark: 147 77 54;
+  }
+
+  /* ── Dark mode: surfaces go dark, ink goes light. Works with any palette. ── */
+  :root[data-mode='dark'] {
+    --sf-white: var(--char-900);
+    --sf-50: var(--char-850);
+    --sf-100: var(--char-800);
+    --sf-200: var(--char-700);
+    --sf-300: var(--p-stone-600);
+    --sf-card: var(--char-800);
+    --ink-700: var(--p-200);
+    --ink-800: var(--p-100);
+    --ink-900: var(--p-50);
+    --ink-950: var(--p-white);
+    --stone-400: var(--p-stone-500);
+    --stone-500: var(--p-stone-400);
+    --stone-600: var(--p-300);
+    --solid: var(--p-white);
+    --on-solid: var(--char-950);
+    color-scheme: dark;
   }
 
   * {
@@ -30,18 +144,19 @@
     @apply bg-warm-white text-char-900 font-sans antialiased;
     font-feature-settings: 'kern' 1, 'liga' 1, 'cv11' 1;
     overflow-x: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease;
   }
 
   /* Visible, high-contrast focus for keyboard users — never removed. */
   :focus-visible {
-    outline: 2px solid var(--sz-brass);
+    outline: 2px solid rgb(var(--brass));
     outline-offset: 3px;
     border-radius: 2px;
   }
 
   ::selection {
-    background: var(--sz-char-950);
-    color: var(--sz-warm-white);
+    background: rgb(var(--solid));
+    color: rgb(var(--on-solid));
   }
 
   h1, h2, h3, h4 {
@@ -75,15 +190,15 @@
   }
 
   .btn-solid {
-    @apply btn bg-char-950 text-warm-white hover:bg-char-700;
+    @apply btn bg-solid text-on-solid hover:bg-solid/80;
   }
 
   .btn-outline {
-    @apply btn border border-char-950/25 text-char-900 hover:border-char-950 hover:bg-char-950 hover:text-warm-white;
+    @apply btn border border-char-950/25 text-char-900 hover:border-solid hover:bg-solid hover:text-on-solid;
   }
 
   .btn-light {
-    @apply btn border border-warm-white/35 text-warm-white hover:border-warm-white hover:bg-warm-white hover:text-char-950;
+    @apply btn border border-warm-white/35 text-warm-white hover:border-warm-white hover:bg-paper hover:text-night;
   }
 
   .btn-brass {
@@ -105,7 +220,7 @@
 
   /* ── Glassmorphism, used sparingly — nav bar and lightbox chrome only ── */
   .glass {
-    background: rgba(250, 248, 245, 0.72);
+    background: rgb(var(--sf-white) / 0.72);
     backdrop-filter: saturate(180%) blur(18px);
     -webkit-backdrop-filter: saturate(180%) blur(18px);
   }

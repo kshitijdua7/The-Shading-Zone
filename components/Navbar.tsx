@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 import { primaryNav, footerNav } from '@/lib/site';
 import { cn } from '@/lib/utils';
 import Wordmark from './Wordmark';
+import ThemeSwitcher from './ThemeSwitcher';
 
 type Contact = { phone: string; phoneHref: string; email: string; emailHref: string };
 type Me = { name: string; role: 'admin' | 'user' } | null;
@@ -158,13 +159,16 @@ export default function Navbar({ contact }: { contact: Contact }) {
                 {l.label}
               </Link>
             ))}
+            <ThemeSwitcher
+              className={cn('transition-colors duration-500', light && !open ? 'text-warm-white' : 'text-char-950')}
+            />
             <Link
               href="/quote"
               className={cn(
                 'hidden lg:inline-flex btn whitespace-nowrap px-5 py-3 min-h-[44px] text-[0.66rem] tracking-[0.16em] 2xl:px-6 2xl:text-[0.72rem] 2xl:tracking-[0.2em]',
                 light
-                  ? 'border border-warm-white/40 text-warm-white hover:bg-warm-white hover:text-char-950'
-                  : 'bg-char-950 text-warm-white hover:bg-brass'
+                  ? 'border border-warm-white/40 text-warm-white hover:bg-paper hover:text-night'
+                  : 'bg-solid text-on-solid hover:bg-brass hover:text-white'
               )}
             >
               Get a free quote
@@ -264,7 +268,7 @@ export default function Navbar({ contact }: { contact: Contact }) {
                 {l.label}
               </Link>
             ))}
-            <Link href="/quote" className="btn bg-warm-white text-char-950 hover:bg-brass hover:text-white">
+            <Link href="/quote" className="btn bg-paper text-night hover:bg-brass hover:text-white">
               Get a free quote
             </Link>
             <Link href="/consultation" className="btn-light">

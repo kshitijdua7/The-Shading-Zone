@@ -68,7 +68,7 @@ export default function TradePage() {
             information relevant to the way you work.
           </p>
           <div className="reveal mt-11 flex flex-col gap-3 sm:flex-row">
-            <Link href="/quote" className="btn bg-warm-white text-char-950 hover:bg-brass hover:text-white">
+            <Link href="/quote" className="btn bg-paper text-night hover:bg-brass hover:text-white">
               Request trade information
             </Link>
             <Link href="/commercial" className="btn-light">Commercial projects</Link>

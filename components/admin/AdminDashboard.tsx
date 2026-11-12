@@ -163,7 +163,7 @@ export default function AdminDashboard({ me }: { me: Me }) {
                 onClick={() => setTab(key)}
                 className={cn(
                   'flex shrink-0 items-center gap-2.5 px-3 py-2 text-left text-sm transition',
-                  tab === key ? 'bg-char-950 text-warm-white' : 'text-char-700 hover:bg-warm-100'
+                  tab === key ? 'bg-solid text-on-solid' : 'text-char-700 hover:bg-warm-100'
                 )}
               >
                 <Icon size={15} className="shrink-0" />
@@ -172,7 +172,7 @@ export default function AdminDashboard({ me }: { me: Me }) {
               </button>
             ))}
             {extraKeys.map((k) => (
-              <button key={k} onClick={() => setTab(k)} className={cn('flex shrink-0 items-center gap-2.5 px-3 py-2 text-left text-sm', tab === k ? 'bg-char-950 text-warm-white' : 'text-char-700 hover:bg-warm-100')}>
+              <button key={k} onClick={() => setTab(k)} className={cn('flex shrink-0 items-center gap-2.5 px-3 py-2 text-left text-sm', tab === k ? 'bg-solid text-on-solid' : 'text-char-700 hover:bg-warm-100')}>
                 <Layers size={15} /> {k}
               </button>
             ))}
@@ -182,14 +182,14 @@ export default function AdminDashboard({ me }: { me: Me }) {
         {/* Main panel */}
         <main className="min-w-0">
           {(isContentTab && dirty.content) || (tab === 'site' && dirty.site) ? (
-            <div className="sticky top-20 z-30 mb-4 flex flex-wrap items-center justify-between gap-3 border border-brass/40 bg-[#FBF5EA] px-5 py-3 shadow-sm">
+            <div className="sticky top-20 z-30 mb-4 flex flex-wrap items-center justify-between gap-3 border border-brass/40 bg-brass/10 px-5 py-3 shadow-sm">
               <span className="text-sm">You have unsaved changes.</span>
               <div className="flex gap-2">
                 <button onClick={load} className="border border-char-950/15 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-wider hover:bg-warm-100">Discard</button>
                 <button
                   disabled={saving}
                   onClick={() => save(tab === 'site' ? 'site' : 'content')}
-                  className="inline-flex items-center gap-2 bg-char-950 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-warm-white hover:bg-brass disabled:opacity-60"
+                  className="inline-flex items-center gap-2 bg-solid px-4 py-2 text-xs font-semibold uppercase tracking-wider text-on-solid hover:bg-brass disabled:opacity-60"
                 >
                   <Save size={14} /> {saving ? 'Saving…' : 'Save & publish'}
                 </button>
@@ -310,7 +310,7 @@ function ListEditor({ title, itemLabel, items, onChange, resolveImage }: {
       actions={
         <button
           onClick={() => set([...items, items.length ? blankLike(items[0]) : { title: '', text: '' }], items.length)}
-          className="inline-flex items-center gap-1.5 bg-char-950 px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-warm-white hover:bg-brass"
+          className="inline-flex items-center gap-1.5 bg-solid px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-on-solid hover:bg-brass"
         >
           <Plus size={14} /> Add {itemLabel}
         </button>
@@ -324,7 +324,7 @@ function ListEditor({ title, itemLabel, items, onChange, resolveImage }: {
               <li key={i}>
                 <button
                   onClick={() => setSel(i)}
-                  className={cn('block w-full truncate border-b border-char-950/5 px-3 py-2.5 text-left text-sm', i === idx ? 'bg-char-950 text-warm-white' : 'hover:bg-warm-100')}
+                  className={cn('block w-full truncate border-b border-char-950/5 px-3 py-2.5 text-left text-sm', i === idx ? 'bg-solid text-on-solid' : 'hover:bg-warm-100')}
                 >
                   {itemTitle(it, i) || <em className="opacity-60">Untitled</em>}
                 </button>
@@ -418,7 +418,7 @@ function LeadsPanel({ leads, onToggle, onDelete }: { leads: Lead[]; onToggle: (l
       ) : (
         <ul className="space-y-3">
           {leads.map((l) => (
-            <li key={l.id} className={cn('border p-4', l.read ? 'border-char-950/10 bg-white' : 'border-brass/50 bg-[#FBF5EA]')}>
+            <li key={l.id} className={cn('border p-4', l.read ? 'border-char-950/10 bg-white' : 'border-brass/50 bg-brass/10')}>
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <p className="font-semibold">{!l.read && <span className="mr-2 inline-block h-2 w-2 rounded-full bg-brass" />}{leadName(l)}</p>
                 <div className="flex items-center gap-2">
@@ -453,7 +453,7 @@ function ImageLibrary({ images, onChange, resolveImage }: {
         <button
           disabled={!newKey || newKey in images}
           onClick={() => { onChange({ ...images, [newKey]: { id: '', alt: '' } }); setNewKey(''); }}
-          className="inline-flex items-center gap-1.5 bg-char-950 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-warm-white hover:bg-brass disabled:opacity-40"
+          className="inline-flex items-center gap-1.5 bg-solid px-4 py-2 text-xs font-semibold uppercase tracking-wider text-on-solid hover:bg-brass disabled:opacity-40"
         >
           <Plus size={14} /> Add image
         </button>
@@ -518,7 +518,7 @@ function AdvancedJson({ content, onSave, onReset }: { content: Obj; onSave: (c: 
       {err && <p className="mt-2 text-sm text-red-700">{err}</p>}
       <button
         onClick={() => { try { const parsed = JSON.parse(text); if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) throw new Error('Top level must be an object.'); onSave(parsed); } catch (e) { setErr((e as Error).message); } }}
-        className="mt-3 inline-flex items-center gap-2 bg-char-950 px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-warm-white hover:bg-brass"
+        className="mt-3 inline-flex items-center gap-2 bg-solid px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-on-solid hover:bg-brass"
       >
         <Save size={14} /> Save JSON & publish
       </button>
